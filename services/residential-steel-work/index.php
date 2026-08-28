@@ -4,46 +4,46 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 ?>
 <?php
 /* ============================================================
-   /services/commercial-steel-construction/index.php — Salt River Steel LLC
-   Phase 4. Premium editorial service page. Commercial Steel Construction.
+   /services/residential-steel-work/index.php — Salt River Steel LLC
+   Phase 4. Premium editorial service page. Residential Steel Work.
    ============================================================ */
 
 $service = null;
-foreach ($services as $s) { if ($s['slug'] === 'commercial-steel-construction') { $service = $s; break; } }
+foreach ($services as $s) { if ($s['slug'] === 'residential-steel-work') { $service = $s; break; } }
 
 $currentPage     = 'services';
-$pageTitle       = 'Commercial Steel Construction Florence AZ | Structural Steel Fabrication | Salt River Steel';
-$pageDescription = 'Structural steel fabrication and installation for commercial buildings in Florence, AZ — beams, columns, mezzanines, canopies, and stairs. Salt River Steel builds and erects it locally. Free estimates — call (480) 450-6959.';
-$canonicalUrl    = $siteUrl . '/services/commercial-steel-construction/';
+$pageTitle       = 'Residential Steel Work Florence AZ | Railings, Stairs & Carports | Salt River Steel';
+$pageDescription = 'Custom residential steel fabrication in Florence, AZ — railings, staircases, carports, patio covers, and architectural metalwork. Salt River Steel builds it locally for your home. Free estimates — call (480) 450-6959.';
+$canonicalUrl    = $siteUrl . '/services/residential-steel-work/';
 $pageCanonical   = $canonicalUrl;
-$ogImage         = $siteUrl . '/assets/images/commercial-steel-construction.jpg';
+$ogImage         = $siteUrl . '/assets/images/residential-steel-work.jpg';
 $heroPreloadImage = '';
 
 /* ---------- Service-specific FAQs ---------- */
 $faqs = [
     [
-        'question' => 'What kinds of commercial steel projects does Salt River Steel handle?',
-        'answer'   => 'Salt River Steel fabricates and installs structural steel for commercial buildings across the Florence area — load-bearing beams and columns, mezzanines and platforms, entry canopies and awnings, steel stairs and railings, and storefront framing. If your commercial project needs steel cut, welded, and set on site, we build it in our Florence shop and erect it locally.',
+        'question' => 'What kinds of residential steel work does Salt River Steel do?',
+        'answer'   => 'Salt River Steel fabricates custom residential steelwork for Florence-area homes — interior and exterior railings, steel staircases, carports and patio covers, security doors and window guards, and ornamental and architectural metal. If you want something in steel for your home, we design it, weld it in our Florence shop, and install it.',
     ],
     [
-        'question' => 'Do you work from an engineer or architect\'s drawings?',
-        'answer'   => 'Yes. Salt River Steel fabricates directly from stamped structural drawings and shop details, and we coordinate with your engineer, architect, or general contractor on connections, tolerances, and load requirements. Bring us the plans and we will turn them into fabricated, code-conscious steel ready for inspection.',
+        'question' => 'How much does custom residential steel work cost?',
+        'answer'   => 'Cost depends on the piece — a short entry handrail is a modest job, while a full staircase or a carport spanning several vehicles is a larger one. Because Salt River Steel fabricates locally in Florence, you skip out-of-area freight. We give every homeowner a free, itemized quote before any steel is cut — call (480) 450-6959.',
     ],
     [
-        'question' => 'How long does commercial steel fabrication take?',
-        'answer'   => 'Timeline depends on tonnage, complexity, and your drawing package, but keeping fabrication local in Florence cuts weeks off the freight and scheduling delays of an out-of-area shop. We give every commercial client a firm fabrication and erection schedule with the quote so it slots cleanly into your build sequence.',
+        'question' => 'Can you match a specific style or design for my home?',
+        'answer'   => 'Yes. Salt River Steel builds to your design — bring a photo, a sketch, or an idea and we will fabricate steel that matches your home\'s lines and finish. Because every piece is cut and welded in-house, we can tailor the pattern, profile, and coating instead of forcing a stock part to fit.',
     ],
     [
-        'question' => 'Can you both fabricate and erect the steel on site?',
-        'answer'   => 'Both. Salt River Steel fabricates your structural steel in Florence and can deliver it for another crew to set, or handle the on-site erection ourselves — bolting, welding, plumbing the frame, and connecting to your foundation. One local source from shop drawing to standing steel.',
+        'question' => 'Will steel railings and carports handle the Arizona climate?',
+        'answer'   => 'They will when they are finished for the desert. Salt River Steel specs corrosion-resistant coatings and heat-stable construction for Central Arizona sun and monsoon moisture, so your railings, carport, or patio cover resist rust and stay true through the seasons. We recommend the right finish for your exposure.',
     ],
     [
-        'question' => 'Are you licensed and insured for commercial work?',
-        'answer'   => 'Yes. Salt River Steel is a licensed, insured steel contractor based in Florence, AZ. Commercial general contractors and property owners work with us because the fabrication, welding, and installation all sit with one accountable local company they can visit at 12356 E Pot O Gold Trail.',
+        'question' => 'Do you build steel carports and patio covers?',
+        'answer'   => 'Yes. Steel carports, patio covers, and shade structures are a common residential job for us — engineered to span your driveway or patio, anchored for Arizona wind, and finished to match the home. Tell us the footprint and we will fabricate the structure around it.',
     ],
     [
-        'question' => 'Do you build mezzanines and equipment platforms?',
-        'answer'   => 'Yes. Steel mezzanines, equipment platforms, and catwalks are a core part of our commercial work — engineered for the load, welded for the long haul, and built to fit the bay you already have. Tell us the span and the load and we will fabricate the structure around it.',
+        'question' => 'Do you install the steelwork or just build it?',
+        'answer'   => 'Both. Salt River Steel fabricates your residential steel in Florence and handles on-site installation — mounting railings, setting staircases, and anchoring carports and covers. You can also arrange pickup if you prefer to install yourself. Let us know your preference with your estimate request.',
     ],
 ];
 $faqSchema = generateFAQSchema($faqs);
@@ -52,10 +52,10 @@ $faqSchema = generateFAQSchema($faqs);
 $serviceSchema = [
     '@context' => 'https://schema.org',
     '@type'    => 'Service',
-    '@id'      => $siteUrl . '/services/commercial-steel-construction/#service-commercial-steel-construction',
-    'name'     => 'Commercial Steel Construction',
-    'serviceType' => 'Structural steel fabrication and erection for commercial buildings',
-    'description' => 'Structural steel fabrication and installation for commercial buildings by Salt River Steel — beams, columns, mezzanines, canopies, stairs, and railings for Florence, AZ and Central Arizona businesses.',
+    '@id'      => $siteUrl . '/services/residential-steel-work/#service-residential-steel-work',
+    'name'     => 'Residential Steel Work',
+    'serviceType' => 'Custom residential steel fabrication and installation',
+    'description' => 'Custom residential steel fabrication by Salt River Steel — railings, staircases, carports, patio covers, security doors, and architectural metalwork for Florence, AZ and Central Arizona homes.',
     'provider' => ['@id' => $siteUrl . '/#organization'],
     'areaServed' => ['@type' => 'City', 'name' => 'Florence', 'containedIn' => ['@type' => 'State', 'name' => 'Arizona']],
     'url' => $canonicalUrl,
@@ -66,17 +66,17 @@ $breadcrumbSchema = [
     'itemListElement' => [
         ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home',     'item' => $siteUrl . '/'],
         ['@type' => 'ListItem', 'position' => 2, 'name' => 'Services', 'item' => $siteUrl . '/services/'],
-        ['@type' => 'ListItem', 'position' => 3, 'name' => 'Commercial Steel Construction', 'item' => $canonicalUrl],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => 'Residential Steel Work', 'item' => $canonicalUrl],
     ],
 ];
 
 /* ---------- "Other services" (exclude current) ---------- */
-$otherServices = array_values(array_filter($services, fn($s) => $s['slug'] !== 'commercial-steel-construction'));
+$otherServices = array_values(array_filter($services, fn($s) => $s['slug'] !== 'residential-steel-work'));
 $otherMedia = [
-    'custom-steel-gates'           => ['img' => 'custom-steel-gates',           'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate fabricated by Salt River Steel in Florence, AZ'],
-    'steel-fencing'                => ['img' => 'steel-fencing',                'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
-    'residential-steel-work'       => ['img' => 'residential-steel-work',       'icon' => 'home',         'alt' => 'Residential steel work in Central Arizona'],
-    'industrial-steel-fabrication' => ['img' => 'industrial-steel-fabrication', 'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
+    'custom-steel-gates'            => ['img' => 'custom-steel-gates',            'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate fabricated by Salt River Steel in Florence, AZ'],
+    'steel-fencing'                 => ['img' => 'steel-fencing',                 'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
+    'commercial-steel-construction' => ['img' => 'commercial-steel-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building near Florence, AZ'],
+    'industrial-steel-fabrication'  => ['img' => 'industrial-steel-fabrication',  'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
 ];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
@@ -86,9 +86,9 @@ $otherMedia = [
 
 <style>
 /* ============================================================
-   Service page — Commercial Steel Construction (Premium editorial)
+   Service page — Residential Steel Work (Premium editorial)
    Token-driven; raw rgba reserved for glass/overlay only.
-   Signature block: .commercial-caps numbered capability bento (unique to this page).
+   Signature block: .res-apps application list with hairline rows (unique to this page).
    ============================================================ */
 :root {
   --sp-line: rgba(var(--color-primary-rgb), 0.10);
@@ -158,26 +158,19 @@ $otherMedia = [
 .sp-breakdown-img { position: relative; }
 .sp-breakdown-img img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3; object-fit: cover; }
 
-/* ---------- SIGNATURE: Commercial capabilities numbered bento (unique to this page) ---------- */
-.commercial-caps { background: var(--color-light); }
-.cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); max-width: 1000px; margin: 0 auto; }
-@media (max-width: 720px) { .cap-grid { grid-template-columns: 1fr; } }
-.cap-card {
-  position: relative; display: flex; gap: var(--space-5); align-items: flex-start;
-  padding: var(--space-8) var(--space-7); border-radius: var(--radius-lg);
-  background: var(--color-white); border: 1px solid var(--sp-line);
-  box-shadow: var(--shadow-sm); overflow: hidden;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+/* ---------- SIGNATURE: Residential applications hairline list (unique to this page) ---------- */
+.res-apps { background: var(--color-light); }
+.res-apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; max-width: 1040px; margin: 0 auto; background: var(--color-white); border: 1px solid var(--sp-line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
+@media (max-width: 860px) { .res-apps-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .res-apps-grid { grid-template-columns: 1fr; } }
+.res-app {
+  padding: var(--space-8) var(--space-6); border-right: 1px solid var(--sp-line); border-bottom: 1px solid var(--sp-line);
+  transition: background var(--transition-base);
 }
-.cap-card::before {
-  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
-  background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
-}
-.cap-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-.cap-num { flex-shrink: 0; font-family: var(--font-heading); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--sp-tint-2); -webkit-text-stroke: 1px var(--color-accent); }
-.cap-body h3 { font-size: var(--font-size-lg); color: var(--color-primary); margin-bottom: var(--space-2); display: flex; align-items: center; gap: var(--space-2); }
-.cap-body h3 svg { color: var(--color-accent); }
-.cap-body p { margin: 0; color: var(--color-gray-dark); font-size: var(--font-size-sm); line-height: 1.6; }
+.res-app:hover { background: var(--sp-tint-1); }
+.res-app__chip { width: 46px; height: 46px; border-radius: var(--radius-full); background: var(--sp-tint-2); color: var(--color-accent); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4); }
+.res-app h3 { font-size: var(--font-size-base); color: var(--color-primary); margin-bottom: var(--space-2); }
+.res-app p { margin: 0; color: var(--color-gray-dark); font-size: var(--font-size-sm); line-height: 1.6; }
 
 /* ---------- PROOF (real credentials, no fabricated reviews) ---------- */
 .sp-proof { background: var(--color-dark); }
@@ -267,77 +260,77 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
       <li class="breadcrumb-sep" aria-hidden="true">/</li>
       <li><a href="/services/">Services</a></li>
       <li class="breadcrumb-sep" aria-hidden="true">/</li>
-      <li aria-current="page">Commercial Steel Construction</li>
+      <li aria-current="page">Residential Steel Work</li>
     </ol>
   </div>
 </nav>
 
 <!-- 1. HERO -->
-<section class="sp-hero" aria-label="Commercial steel construction in Florence, Arizona">
+<section class="sp-hero" aria-label="Residential steel work in Florence, Arizona">
   <img class="sp-hero-bg"
-       src="/assets/images/commercial-steel-construction.jpg"
-       srcset="/assets/images/commercial-steel-construction-480.webp 480w, /assets/images/commercial-steel-construction-960.webp 960w, /assets/images/commercial-steel-construction-1600.webp 1600w"
+       src="/assets/images/residential-steel-work.jpg"
+       srcset="/assets/images/residential-steel-work-480.webp 480w, /assets/images/residential-steel-work-960.webp 960w, /assets/images/residential-steel-work-1600.webp 1600w"
        sizes="100vw"
-       alt="Structural steel frame of a commercial building erected by Salt River Steel in Florence, Arizona"
+       alt="Custom residential steel railing and metalwork fabricated by Salt River Steel in Florence, Arizona"
        width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async">
   <div class="container">
     <div class="sp-hero-inner">
-      <span class="eyebrow-label">Commercial Steel Construction · Florence, AZ</span>
-      <h1>Structural steel, <span class="text-accent">fabricated and set locally</span></h1>
-      <p class="hero-answer">Salt River Steel fabricates and installs structural steel for commercial buildings across Florence and Central Arizona — beams, columns, mezzanines, canopies, stairs, and railings. We work from your engineer's drawings, cut and weld the steel in our Florence shop, and can erect the frame on site, keeping your commercial project on one accountable local schedule.</p>
+      <span class="eyebrow-label">Residential Steel Work · Florence, AZ</span>
+      <h1>Custom steel for your home, <span class="text-accent">built to your design</span></h1>
+      <p class="hero-answer">Salt River Steel designs, fabricates, and installs custom residential steelwork for Florence and Central Arizona homes — railings and staircases, carports and patio covers, security doors, and architectural metal. Every piece is cut and welded in our Florence shop to match your home's style and stand up to the desert climate.</p>
       <div class="sp-hero-actions">
-        <a href="/contact/" class="btn btn-accent btn-lg">Get a Free Project Estimate</a>
+        <a href="/contact/" class="btn btn-accent btn-lg">Get a Free Estimate</a>
         <a href="tel:<?php echo $phoneDigits; ?>" class="btn btn-outline-white btn-lg"><?php echo icon('phone', 18); ?> Call <?php echo $phone; ?></a>
       </div>
       <div class="sp-hero-trust">
         <span><?php echo icon('shield-check', 18); ?> Licensed &amp; Insured</span>
         <span><?php echo icon('map-pin', 18); ?> Florence-Based Fabrication</span>
-        <span><?php echo icon('file-check', 18); ?> Builds to Your Drawings</span>
+        <span><?php echo icon('pen-tool', 18); ?> Built to Your Design</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 2. PROBLEM STATEMENT -->
-<section class="section sp-problem" aria-label="Signs your commercial build needs a local steel fabricator">
+<section class="section sp-problem" aria-label="Signs you need custom residential steel">
   <div class="container">
-    <p class="sp-pullquote reveal-up">On a commercial build, the steel package sets the whole schedule — <span class="text-accent">and out-of-area fabrication is where timelines quietly slip.</span></p>
+    <p class="sp-pullquote reveal-up">A home upgrade in wood or aluminum looks fine on day one — <span class="text-accent">steel is what still looks right ten Arizona summers later.</span></p>
     <div class="signs-bento">
       <div class="sign-card reveal-up reveal-delay-1">
-        <div class="sign-card__icon"><?php echo icon('truck', 24); ?></div>
-        <h3>Freight is eating your budget</h3>
-        <p>Hauling fabricated steel in from Phoenix or out of state adds premium freight and coordination to every load. Local Florence fabrication keeps that money in the project.</p>
+        <div class="sign-card__icon"><?php echo icon('pen-tool', 24); ?></div>
+        <h3>Stock parts won't fit</h3>
+        <p>Odd stair rises, curved patios, and custom entries rarely match off-the-shelf railings or covers. Custom steel is built to your exact space instead of forced to fit.</p>
       </div>
       <div class="sign-card reveal-up reveal-delay-2">
-        <div class="sign-card__icon"><?php echo icon('clock', 24); ?></div>
-        <h3>Lead times keep slipping</h3>
-        <p>A distant shop juggles your job behind dozens of others. Fabricating locally means a firm schedule you can actually build the rest of the sequence around.</p>
+        <div class="sign-card__icon"><?php echo icon('home', 24); ?></div>
+        <h3>You want it to last</h3>
+        <p>Wood rots and cheap aluminum bends. Steel railings, carports, and covers finished for the desert hold their shape and their look through Arizona sun and monsoon.</p>
       </div>
       <div class="sign-card reveal-up reveal-delay-3">
-        <div class="sign-card__icon"><?php echo icon('file-check', 24); ?></div>
-        <h3>Connections don't line up</h3>
-        <p>When fabrication and field crews aren't talking, bolt holes and tolerances fight the foundation. One local team from shop drawing to erection keeps the steel true.</p>
+        <div class="sign-card__icon"><?php echo icon('shield-check', 24); ?></div>
+        <h3>You want real security</h3>
+        <p>Steel security doors and window guards add protection that also looks intentional — fabricated to your openings and finished to match the home.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 3. EXPERT POSITIONING -->
-<section class="section sp-expert" aria-label="Why Salt River Steel for commercial steel">
+<section class="section sp-expert" aria-label="Why Salt River Steel for residential steelwork">
   <div class="container">
     <div class="sp-expert-grid">
       <div class="sp-bigstat reveal-left">
-        <span class="big">1</span>
-        <span class="cap">Local Source, Shop<br>Drawing to Standing Steel</span>
+        <span class="big">100%</span>
+        <span class="cap">Custom-Built<br>In Our Florence Shop</span>
       </div>
       <div class="sp-expert-copy reveal-right">
         <span class="eyebrow-label">Local Fabrication Advantage</span>
-        <h2>Why build your steel with <span class="text-accent">Salt River Steel?</span></h2>
-        <p class="answer-block">Salt River Steel fabricates commercial structural steel in its own Florence shop and can erect it on site, so your beams, columns, and connections come from one accountable local company instead of a distant supplier and a separate erector. That means tighter tolerances, no premium freight, and a schedule that holds.</p>
+        <h2>Why build with <span class="text-accent">Salt River Steel?</span></h2>
+        <p class="answer-block">Salt River Steel fabricates every residential piece in its own Florence shop rather than reselling stock parts, so your railing, staircase, or carport is cut and welded to your home instead of trimmed to fit. You work directly with the fabricator, and everything is finished for the Central Arizona climate.</p>
         <ul class="sp-diff-list">
-          <li><span class="ic"><?php echo icon('hammer', 20); ?></span><div><strong>Fabricated in Florence</strong><p>Beams, columns, and connections cut and welded in-house so fit and quality stay under our control — no drop-shipped assemblies.</p></div></li>
-          <li><span class="ic"><?php echo icon('file-check', 20); ?></span><div><strong>Built to stamped drawings</strong><p>We fabricate from your engineer's and architect's details and coordinate connections, loads, and tolerances for inspection.</p></div></li>
-          <li><span class="ic"><?php echo icon('hard-hat', 20); ?></span><div><strong>Fabricate and erect</strong><p>Deliver for your crew or set the frame ourselves — bolting, welding, and plumbing the steel to your foundation.</p></div></li>
+          <li><span class="ic"><?php echo icon('pen-tool', 20); ?></span><div><strong>Built to your design</strong><p>Bring a photo, a sketch, or an idea — we fabricate steel that matches your home's lines, not a catalog part.</p></div></li>
+          <li><span class="ic"><?php echo icon('shield-check', 20); ?></span><div><strong>Finished for the desert</strong><p>Corrosion-resistant coatings and heat-stable construction chosen for Central Arizona sun and monsoon moisture.</p></div></li>
+          <li><span class="ic"><?php echo icon('users', 20); ?></span><div><strong>You talk to the fabricator</strong><p>Straight answers on design, finish, and installation directly from the crew building your steel.</p></div></li>
         </ul>
       </div>
     </div>
@@ -345,97 +338,99 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 </section>
 
 <!-- 4. SERVICE BREAKDOWN -->
-<section class="section sp-breakdown" aria-label="What's included in commercial steel construction">
+<section class="section sp-breakdown" aria-label="What's included in residential steel work">
   <div class="container">
     <div class="sp-breakdown-grid">
       <div class="reveal-left">
         <span class="eyebrow-label">What's Included</span>
-        <h2>What does a <span class="text-accent">commercial steel package</span> cover?</h2>
-        <p class="answer-block">A commercial steel package from Salt River Steel runs from shop drawing review through fabrication, finishing, delivery, and on-site erection. We handle the structural members, the miscellaneous steel, and the connections so your Florence-area commercial project has one source accountable for the steel from start to finish.</p>
+        <h2>What can <span class="text-accent">Salt River Steel</span> build for your home?</h2>
+        <p class="answer-block">From a single entry handrail to a carport spanning the driveway, Salt River Steel handles residential steel end to end — design, fabrication, finishing, and installation. We build the piece, coat it for the desert, and mount it, so one local shop is accountable for the whole job.</p>
         <ul class="sp-included">
-          <li><?php echo icon('check', 18); ?> Structural beams &amp; columns</li>
-          <li><?php echo icon('check', 18); ?> Mezzanines &amp; equipment platforms</li>
-          <li><?php echo icon('check', 18); ?> Entry canopies &amp; awnings</li>
-          <li><?php echo icon('check', 18); ?> Steel stairs &amp; handrail</li>
-          <li><?php echo icon('check', 18); ?> Storefront &amp; opening framing</li>
-          <li><?php echo icon('check', 18); ?> Bollards, lintels &amp; misc. steel</li>
-          <li><?php echo icon('check', 18); ?> Shop-drawing coordination</li>
-          <li><?php echo icon('check', 18); ?> On-site erection &amp; field welding</li>
+          <li><?php echo icon('check', 18); ?> Interior &amp; exterior railings</li>
+          <li><?php echo icon('check', 18); ?> Steel staircases &amp; treads</li>
+          <li><?php echo icon('check', 18); ?> Carports &amp; shade structures</li>
+          <li><?php echo icon('check', 18); ?> Patio &amp; ramada covers</li>
+          <li><?php echo icon('check', 18); ?> Security doors &amp; window guards</li>
+          <li><?php echo icon('check', 18); ?> Ornamental &amp; architectural metal</li>
+          <li><?php echo icon('check', 18); ?> Corrosion-resistant finishing</li>
+          <li><?php echo icon('check', 18); ?> On-site installation</li>
         </ul>
       </div>
       <div class="sp-breakdown-img reveal-right">
-        <img src="/assets/images/home-commercial-building.jpg"
-             srcset="/assets/images/home-commercial-building-480.webp 480w, /assets/images/home-commercial-building-960.webp 960w, /assets/images/home-commercial-building-1600.webp 1600w"
+        <img src="/assets/images/home-residential-steel.jpg"
+             srcset="/assets/images/home-residential-steel-480.webp 480w, /assets/images/home-residential-steel-960.webp 960w, /assets/images/home-residential-steel-1600.webp 1600w"
              sizes="(max-width: 900px) 100vw, 460px"
-             alt="Completed commercial building with structural steel framing by Salt River Steel near Florence, AZ"
+             alt="Custom steel staircase and railing installed in a Central Arizona home by Salt River Steel"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. SIGNATURE — Commercial capabilities -->
-<section class="section commercial-caps" aria-label="Commercial steel capabilities">
+<!-- 5. SIGNATURE — Residential applications -->
+<section class="section res-apps" aria-label="Residential steel applications">
   <div class="container">
     <div class="sp-section-head reveal-up">
-      <span class="section-subtitle">what we build</span>
-      <h2>What <span class="text-accent">commercial steel work</span> can you handle?</h2>
-      <p class="answer-block">Salt River Steel covers the structural and miscellaneous steel most Central Arizona commercial projects need. These are the four capability areas we're brought in for most often — each fabricated in Florence and installed to the drawings and inspection standards your build runs on.</p>
+      <span class="section-subtitle">around your home</span>
+      <h2>Where does <span class="text-accent">custom steel</span> work best at home?</h2>
+      <p class="answer-block">Salt River Steel builds steel for the spots where homeowners want strength and a clean look that lasts. These are the residential applications Florence-area homeowners ask us for most — each one fabricated to your home and finished for the desert.</p>
     </div>
-    <div class="cap-grid">
-      <div class="cap-card reveal-up reveal-delay-1">
-        <span class="cap-num">01</span>
-        <div class="cap-body">
-          <h3><?php echo icon('building-2', 22); ?> Structural Frames</h3>
-          <p>Load-bearing beams, columns, and moment connections that carry the building — fabricated to your engineer's stamped design and erected true to the foundation.</p>
-        </div>
+    <div class="res-apps-grid">
+      <div class="res-app reveal-up reveal-delay-1">
+        <div class="res-app__chip"><?php echo icon('home', 22); ?></div>
+        <h3>Railings &amp; Handrail</h3>
+        <p>Interior stair rails, balcony guards, and exterior entry handrail built to code and to your home's style.</p>
       </div>
-      <div class="cap-card reveal-up reveal-delay-2">
-        <span class="cap-num">02</span>
-        <div class="cap-body">
-          <h3><?php echo icon('hammer', 22); ?> Mezzanines &amp; Platforms</h3>
-          <p>Steel mezzanines, equipment platforms, and catwalks engineered for the load and welded to add usable space in the bay you already have.</p>
-        </div>
+      <div class="res-app reveal-up reveal-delay-2">
+        <div class="res-app__chip"><?php echo icon('chevron-up', 22); ?></div>
+        <h3>Staircases</h3>
+        <p>Steel stair stringers and treads — straight runs or custom shapes — fabricated for the rise and run you have.</p>
       </div>
-      <div class="cap-card reveal-up reveal-delay-1">
-        <span class="cap-num">03</span>
-        <div class="cap-body">
-          <h3><?php echo icon('home', 22); ?> Canopies &amp; Storefronts</h3>
-          <p>Entry canopies, awnings, and storefront framing that shape the face of your business and stand up to Arizona sun and wind.</p>
-        </div>
+      <div class="res-app reveal-up reveal-delay-3">
+        <div class="res-app__chip"><?php echo icon('car', 22); ?></div>
+        <h3>Carports</h3>
+        <p>Steel carports engineered to span your driveway and anchored to stand up to Arizona wind and sun.</p>
       </div>
-      <div class="cap-card reveal-up reveal-delay-2">
-        <span class="cap-num">04</span>
-        <div class="cap-body">
-          <h3><?php echo icon('wrench', 22); ?> Stairs, Rails &amp; Misc.</h3>
-          <p>Code-conscious steel stairs, handrail, guardrail, bollards, and the miscellaneous metal that ties the whole commercial build together.</p>
-        </div>
+      <div class="res-app reveal-up reveal-delay-1">
+        <div class="res-app__chip"><?php echo icon('building', 22); ?></div>
+        <h3>Patio &amp; Ramada Covers</h3>
+        <p>Shade structures and patio covers that add livable outdoor space and match the home's finish.</p>
+      </div>
+      <div class="res-app reveal-up reveal-delay-2">
+        <div class="res-app__chip"><?php echo icon('shield-check', 22); ?></div>
+        <h3>Security Doors &amp; Guards</h3>
+        <p>Steel security doors and window guards fabricated to your openings for protection that looks intentional.</p>
+      </div>
+      <div class="res-app reveal-up reveal-delay-3">
+        <div class="res-app__chip"><?php echo icon('pen-tool', 22); ?></div>
+        <h3>Ornamental Metal</h3>
+        <p>Decorative and architectural steel — accents, panels, and one-off pieces built from your design.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 6. PROOF -->
-<section class="section sp-proof" aria-label="Why Florence contractors trust Salt River Steel">
+<section class="section sp-proof" aria-label="Why Florence homeowners trust Salt River Steel">
   <div class="container">
     <div class="sp-section-head reveal-up">
-      <h2>Can you trust the steel to <span class="text-accent">pass inspection?</span></h2>
-      <p class="answer-block">Salt River Steel is a licensed, insured steel contractor based in Florence, AZ, fabricating commercial steel from stamped drawings since 2022. General contractors and owners work with us because the fabrication, welding, and erection sit with one accountable local company they can visit — not a distant supplier.</p>
+      <h2>Can you trust the work to <span class="text-accent">hold up?</span></h2>
+      <p class="answer-block">Salt River Steel is a licensed, insured steel fabricator based in Florence, AZ, building custom steel for local homes since 2022. Homeowners work with us because the design, welding, and installation all sit with one accountable local shop they can visit at 12356 E Pot O Gold Trail — not a distant supplier.</p>
     </div>
     <div class="sp-proof-grid">
       <div class="sp-proof-img reveal-left">
-        <img src="/assets/images/home-hero-steel-construction.jpg"
-             srcset="/assets/images/home-hero-steel-construction-480.webp 480w, /assets/images/home-hero-steel-construction-960.webp 960w, /assets/images/home-hero-steel-construction-1600.webp 1600w"
+        <img src="/assets/images/home-custom-steel-gate.jpg"
+             srcset="/assets/images/home-custom-steel-gate-480.webp 480w, /assets/images/home-custom-steel-gate-960.webp 960w, /assets/images/home-custom-steel-gate-1600.webp 1600w"
              sizes="(max-width: 860px) 100vw, 460px"
-             alt="Salt River Steel structural steel erected on a Central Arizona commercial job site"
+             alt="Custom residential steelwork fabricated and finished by Salt River Steel in Florence, AZ"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
       <div class="reveal-right">
         <ul class="sp-proof-points">
-          <li><?php echo icon('badge-check', 20); ?> Licensed &amp; insured Arizona steel contractor</li>
+          <li><?php echo icon('badge-check', 20); ?> Licensed &amp; insured Arizona steel fabricator</li>
           <li><?php echo icon('map-pin', 20); ?> Local shop at 12356 E Pot O Gold Trail, Florence</li>
-          <li><?php echo icon('file-check', 20); ?> Fabricates from stamped structural drawings</li>
-          <li><?php echo icon('calendar', 20); ?> Serving Central Arizona since <?php echo $yearEstablished; ?></li>
+          <li><?php echo icon('pen-tool', 20); ?> Every piece designed and welded in-house</li>
+          <li><?php echo icon('calendar', 20); ?> Serving Central Arizona homes since <?php echo $yearEstablished; ?></li>
         </ul>
         <div class="sp-proof-badges">
           <a href="<?php echo htmlspecialchars($gbpUrl); ?>" class="sp-proof-badge" target="_blank" rel="noopener"><?php echo icon('map-pin', 18); ?> Find us on Google</a>
@@ -447,32 +442,32 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 </section>
 
 <!-- 7. COMPARISON -->
-<section class="section sp-compare" aria-label="Local fabrication compared to distant suppliers">
+<section class="section sp-compare" aria-label="Custom steel compared to stock alternatives">
   <div class="container">
     <div class="sp-section-head reveal-up">
       <span class="section-subtitle">the local difference</span>
-      <h2>Why not just source steel <span class="text-accent">from a big-city shop?</span></h2>
-      <p class="answer-block">You can — but a distant fabricator means premium freight, long lead times, and a hand-off between whoever builds the steel and whoever sets it. Salt River Steel fabricates in Florence and can erect it too, so your commercial steel stays on one accountable local schedule.</p>
+      <h2>Why not just buy a <span class="text-accent">stock railing or cover?</span></h2>
+      <p class="answer-block">You can — but a big-box railing or a kit carport comes in fixed sizes, thinner material, and finishes not made for the desert. Salt River Steel fabricates in Florence to your exact space, so the piece fits, lasts, and matches your home.</p>
     </div>
     <div class="compare-grid">
       <div class="compare-col compare-col--them reveal-left">
-        <h3><?php echo icon('truck', 22); ?> Distant Steel Supplier</h3>
+        <h3><?php echo icon('truck', 22); ?> Stock / Kit Product</h3>
         <ul>
-          <li><?php echo icon('minus', 18); ?> Premium freight on every fabricated load</li>
-          <li><?php echo icon('minus', 18); ?> Long lead times, hard to expedite</li>
-          <li><?php echo icon('minus', 18); ?> Fabricator and erector are separate parties</li>
-          <li><?php echo icon('minus', 18); ?> No local crew to fix a field problem fast</li>
-          <li><?php echo icon('minus', 18); ?> Coordination gaps between shop and site</li>
+          <li><?php echo icon('minus', 18); ?> Fixed sizes forced onto your space</li>
+          <li><?php echo icon('minus', 18); ?> Thinner material that bends and fades</li>
+          <li><?php echo icon('minus', 18); ?> Finishes not specced for Arizona sun</li>
+          <li><?php echo icon('minus', 18); ?> Self-install or a separate installer</li>
+          <li><?php echo icon('minus', 18); ?> No local shop to adjust or repair it</li>
         </ul>
       </div>
       <div class="compare-col compare-col--us reveal-right">
         <h3><?php echo icon('shield-check', 22); ?> Salt River Steel</h3>
         <ul>
-          <li><?php echo icon('check', 18); ?> Local pricing, no premium freight</li>
-          <li><?php echo icon('check', 18); ?> A firm fabrication and erection schedule</li>
-          <li><?php echo icon('check', 18); ?> One source from shop drawing to standing steel</li>
-          <li><?php echo icon('check', 18); ?> Florence crew on call for the field</li>
-          <li><?php echo icon('check', 18); ?> Fabrication and erection stay coordinated</li>
+          <li><?php echo icon('check', 18); ?> Built to your exact space and design</li>
+          <li><?php echo icon('check', 18); ?> Heavier steel welded to last</li>
+          <li><?php echo icon('check', 18); ?> Corrosion-resistant, desert-ready finish</li>
+          <li><?php echo icon('check', 18); ?> Fabrication and installation from one shop</li>
+          <li><?php echo icon('check', 18); ?> A local crew you can call after the job</li>
         </ul>
       </div>
     </div>
@@ -480,11 +475,11 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 </section>
 
 <!-- 8. FAQ -->
-<section class="section sp-faq" aria-label="Commercial steel construction questions">
+<section class="section sp-faq" aria-label="Residential steel work questions">
   <div class="container">
     <div class="sp-section-head reveal-up">
-      <span class="eyebrow-label">Project Questions</span>
-      <h2>Common questions about <span class="text-accent">commercial steel</span></h2>
+      <span class="eyebrow-label">Homeowner Questions</span>
+      <h2>Common questions about <span class="text-accent">residential steel</span></h2>
     </div>
     <div class="faq-grid">
       <?php $fi = 0; foreach ($faqs as $faq): $fdir = ($fi % 2 === 0) ? 'reveal-left' : 'reveal-right'; ?>
@@ -527,12 +522,12 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 </section>
 
 <!-- FINAL CTA -->
-<section class="section sp-cta" aria-label="Request a commercial steel estimate">
+<section class="section sp-cta" aria-label="Request a residential steel estimate">
   <div class="container">
-    <h2 class="reveal-up">Let's put your steel package on a local schedule.</h2>
-    <p class="reveal-up reveal-delay-1">Send Salt River Steel your drawings — a single canopy or a full structural frame — and we'll fabricate it in Florence and set it on site. Your commercial estimate is free.</p>
+    <h2 class="reveal-up">Let's build the steel your home has been missing.</h2>
+    <p class="reveal-up reveal-delay-1">Tell Salt River Steel what you have in mind — a railing, a staircase, a carport, or something one-of-a-kind — and we'll design, quote, and fabricate it right here in Florence. Your estimate is free.</p>
     <div class="sp-cta-actions reveal-up reveal-delay-2">
-      <a href="/contact/" class="btn btn-accent btn-lg">Get a Free Project Estimate</a>
+      <a href="/contact/" class="btn btn-accent btn-lg">Get a Free Estimate</a>
       <a href="tel:<?php echo $phoneDigits; ?>" class="btn btn-outline-white btn-lg"><?php echo icon('phone', 18); ?> <?php echo $phone; ?></a>
     </div>
     <div class="phone-line reveal-up reveal-delay-3"><?php echo icon('phone', 22); ?> <a href="tel:<?php echo $phoneDigits; ?>"><?php echo $phone; ?></a></div>
