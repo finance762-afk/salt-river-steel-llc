@@ -57,6 +57,10 @@
                     <li role="none">
                         <a href="/about/" role="menuitem" <?php echo isActivePage('about'); ?>>About</a>
                     </li>
+
+                    <li role="none">
+                        <a href="/blog/" role="menuitem" <?php echo isActivePage('blog'); ?>>Blog</a>
+                    </li>
                     
                     <li role="none">
                         <a href="/contact/" role="menuitem" <?php echo isActivePage('contact'); ?>>Contact</a>
@@ -106,6 +110,7 @@
 
                     <li><a href="/service-areas/" <?php echo isActivePage('service-areas'); ?>>Service Areas</a></li>
                     <li><a href="/about/" <?php echo isActivePage('about'); ?>>About</a></li>
+                    <li><a href="/blog/" <?php echo isActivePage('blog'); ?>>Blog</a></li>
                     <li><a href="/contact/" <?php echo isActivePage('contact'); ?>>Contact</a></li>
                 </ul>
                 

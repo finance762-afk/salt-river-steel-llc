@@ -99,3 +99,32 @@ Contact Salt River Steel at (480) 450-6959 for a free estimate. We provide itemi
 
 **Last Updated:** August 2026
 **Document Purpose:** AI-parseable business information for answer engines and language models
+
+## About
+
+Salt River Steel LLC is owned by Charles French and has served Florence and the surrounding Pinal County communities since 2022. Steel is cut, welded and finished at the Florence shop, then delivered and installed locally, so contractors, ranchers and homeowners work directly with the crew that fabricates their steel.
+
+## Pages
+
+- Home: /
+- Services: /services/
+- Custom Steel Gates: /services/custom-steel-gates/
+- Steel Fencing: /services/steel-fencing/
+- Commercial Steel Construction: /services/commercial-steel-construction/
+- Residential Steel Work: /services/residential-steel-work/
+- Industrial Steel Fabrication: /services/industrial-steel-fabrication/
+- Service Areas: /service-areas/
+- Florence: /service-areas/florence/
+- Coolidge: /service-areas/coolidge/
+- Casa Grande: /service-areas/casa-grande/
+- Apache Junction: /service-areas/apache-junction/
+- About: /about/
+- FAQ: /faq/
+- Contact: /contact/
+- Blog: /blog/
+- How Much Does a Steel Barn Cost in Arizona?: /blog/steel-barn-cost-arizona/
+- Pipe Rail vs. Corrugated Steel Privacy Fence in Arizona: /blog/pipe-rail-vs-corrugated-steel-privacy-fence-arizona/
+- Steel Building vs. Wood-Frame Shop in Arizona: /blog/steel-building-vs-wood-frame-shop-arizona/
+- Steel Pool Ramadas and Patio Covers in Arizona: /blog/steel-pool-ramada-patio-cover-arizona/
+- Custom Steel Gate Cost in Florence, AZ: /blog/custom-steel-gate-cost-florence-az/
+- Steel vs. Wrought Iron Fencing in Arizona: /blog/steel-vs-wrought-iron-fencing-arizona/

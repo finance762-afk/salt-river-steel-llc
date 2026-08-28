@@ -328,3 +328,14 @@ Salt River Steel is a locally owned Florence business committed to supporting Ce
 **Last Updated:** August 2026
 **Document Purpose:** Expanded AI-parseable business information for answer engines, language models, and comprehensive business queries
 **Version:** llms-full.txt (comprehensive edition)
+
+## Blog Guides
+
+Answer-first guides written by the Salt River Steel crew (all at /blog/):
+
+- How Much Does a Steel Barn Cost in Arizona? — /blog/steel-barn-cost-arizona/ — open shade rows vs. mare motels vs. enclosed barns, what drives the price, Arizona wind/heat/soil factors, how to budget.
+- Pipe Rail vs. Corrugated Steel Privacy Fence in Arizona — /blog/pipe-rail-vs-corrugated-steel-privacy-fence-arizona/ — containment vs. privacy, cost per foot, monsoon wind load, combining both on one property.
+- Steel Building vs. Wood-Frame Shop in Arizona — /blog/steel-building-vs-wood-frame-shop-arizona/ — clear span, build speed, termites, heat, fire, long-term upkeep, when wood still makes sense.
+- Steel Pool Ramadas and Patio Covers in Arizona — /blog/steel-pool-ramada-patio-cover-arizona/ — sizing for low-angle sun, roof options, attached vs. freestanding, what drives cost.
+- Custom Steel Gate Cost in Florence, AZ — /blog/custom-steel-gate-cost-florence-az/ — typical ranges, manual vs. automated, site factors.
+- Steel vs. Wrought Iron Fencing in Arizona — /blog/steel-vs-wrought-iron-fencing-arizona/ — cost, maintenance, heat resistance, when authentic wrought iron is worth it.
