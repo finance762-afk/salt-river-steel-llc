@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/config.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/blog-data.php';
 ?>
 <?php
 /* ============================================================
@@ -510,6 +511,127 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
   .hero-modern { min-height: 0; padding: var(--space-8) 0; }
   .hero-modern::before, .hero-modern::after { display: none; }
 }
+
+/* ============================================================
+   BLOG PREVIEW SECTION (Homepage "From the Blog")
+   ============================================================ */
+.blog-preview-section {
+  background: var(--color-bg-alt);
+  padding: var(--space-4xl) 0;
+}
+
+.blog-preview-featured {
+  margin-top: var(--space-2xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-featured-card__image {
+  position: relative;
+  height: 100%;
+  min-height: 300px;
+}
+
+.blog-featured-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-featured-badge {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  background: var(--color-accent);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-featured-card__body {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-featured-meta {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+.blog-featured-meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.blog-featured-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  line-height: 1.3;
+}
+
+.blog-featured-title a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.blog-featured-title a:hover {
+  color: var(--color-accent);
+}
+
+.blog-featured-excerpt {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: var(--space-xl);
+}
+
+.blog-preview-cta {
+  margin-top: var(--space-2xl);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .blog-featured-card {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-featured-card__image {
+    min-height: 200px;
+    max-height: 250px;
+  }
+
+  .blog-featured-card__body {
+    padding: var(--space-lg);
+  }
+
+  .blog-featured-title {
+    font-size: 1.5rem;
+  }
+}
 </style>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
@@ -812,6 +934,62 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 
 <!-- FAQPage schema (AI comprehension aid) -->
 <?php echo $faqSchema; ?>
+
+<!-- ============================================================
+     FROM THE BLOG (05) — Homepage preview pulling from registry
+     ============================================================ -->
+<?php if (!empty($blogPosts)): ?>
+<section class="section numbered-section blog-preview-section" data-num="05" aria-label="From the blog">
+    <span class="num-watermark" aria-hidden="true">05</span>
+    <div class="container">
+        <div class="section-title reveal-up">
+            <span class="eyebrow-label" style="color: var(--color-accent);">From the Blog</span>
+            <h2>Steel & fabrication <span class="text-accent">insights</span></h2>
+            <p class="hero-answer">Expert insights on custom steel gates, fencing costs, material comparisons, and industry knowledge from the Salt River Steel team.</p>
+        </div>
+
+        <?php
+        // Featured post (latest from registry)
+        $featuredPost = $blogPosts[0];
+        ?>
+        <div class="blog-preview-featured reveal-up">
+            <article class="blog-featured-card">
+                <div class="blog-featured-card__image">
+                    <img
+                        src="<?php echo htmlspecialchars($featuredPost['image']); ?>"
+                        alt="<?php echo htmlspecialchars($featuredPost['alt']); ?>"
+                        loading="lazy"
+                        width="600"
+                        height="400"
+                    >
+                    <span class="blog-featured-badge"><?php echo htmlspecialchars($featuredPost['category']); ?></span>
+                </div>
+                <div class="blog-featured-card__body">
+                    <div class="blog-featured-meta">
+                        <span><?php echo icon('calendar', 18); ?> <?php echo htmlspecialchars($featuredPost['date']); ?></span>
+                        <span><?php echo icon('clock', 18); ?> <?php echo htmlspecialchars($featuredPost['readtime']); ?></span>
+                    </div>
+                    <h3 class="blog-featured-title">
+                        <a href="/blog/<?php echo htmlspecialchars($featuredPost['slug']); ?>/">
+                            <?php echo htmlspecialchars($featuredPost['title']); ?>
+                        </a>
+                    </h3>
+                    <p class="blog-featured-excerpt">
+                        <?php echo htmlspecialchars($featuredPost['excerpt']); ?>
+                    </p>
+                    <a href="/blog/<?php echo htmlspecialchars($featuredPost['slug']); ?>/" class="btn btn-primary">
+                        Read Article <?php echo icon('arrow-right', 18); ?>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <div class="blog-preview-cta reveal-up reveal-delay-1">
+            <a href="/blog/" class="btn btn-outline-primary">View All Articles <?php echo icon('arrow-right', 18); ?></a>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
 
 <!-- ============================================================
      CLOSING CTA

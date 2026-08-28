@@ -49,7 +49,11 @@
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    
+
+                    <li role="none">
+                        <a href="/service-areas/" role="menuitem" <?php echo isActivePage('service-areas'); ?>>Service Areas</a>
+                    </li>
+
                     <li role="none">
                         <a href="/about/" role="menuitem" <?php echo isActivePage('about'); ?>>About</a>
                     </li>
@@ -99,7 +103,8 @@
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    
+
+                    <li><a href="/service-areas/" <?php echo isActivePage('service-areas'); ?>>Service Areas</a></li>
                     <li><a href="/about/" <?php echo isActivePage('about'); ?>>About</a></li>
                     <li><a href="/contact/" <?php echo isActivePage('contact'); ?>>Contact</a></li>
                 </ul>

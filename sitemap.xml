@@ -72,6 +72,62 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Service Areas Main -->
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/service-areas/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual Service Area Pages -->
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/service-areas/florence/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/service-areas/coolidge/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/service-areas/casa-grande/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/service-areas/apache-junction/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Main -->
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/blog/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/blog/custom-steel-gate-cost-florence-az/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://salt-river-steel-llc.pageone.cloud/blog/steel-vs-wrought-iron-fencing-arizona/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Legal / Compliance Pages (Premium tier) -->
   <url>
     <loc>https://salt-river-steel-llc.pageone.cloud/privacy-policy/</loc>
