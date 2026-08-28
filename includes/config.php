@@ -117,7 +117,22 @@ $services = [
 
 /* ---------- Service Areas ---------- */
 $serviceAreas = [
-    'Florence',
+    [
+        'name' => 'Florence',
+        'slug' => 'florence',
+    ],
+    [
+        'name' => 'Apache Junction',
+        'slug' => 'apache-junction',
+    ],
+    [
+        'name' => 'Casa Grande',
+        'slug' => 'casa-grande',
+    ],
+    [
+        'name' => 'Coolidge',
+        'slug' => 'coolidge',
+    ],
 ];
 
 /* ---------- Social ----------
