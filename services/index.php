@@ -12,6 +12,7 @@ $currentPage     = 'services';
 $pageTitle       = 'Steel Services in Florence, AZ | Gates, Fencing & Fabrication | Salt River Steel';
 $pageDescription = 'Explore Salt River Steel\'s steel services in Florence, AZ — custom steel gates, steel fencing, and commercial, residential, and industrial fabrication, all built in-house with same-week local turnaround.';
 $pageCanonical   = $siteUrl . '/services/';
+$canonicalUrl    = $pageCanonical;
 
 /* ---- Per-service homepage-style card data (photo, alt, bullets, icon) ---- */
 $serviceIcons = [

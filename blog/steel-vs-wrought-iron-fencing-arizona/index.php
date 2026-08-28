@@ -10,6 +10,7 @@ $currentPage = 'blog';
 $pageTitle = 'Steel vs. Wrought Iron Fencing in Arizona (2026 Guide)';
 $pageDescription = 'Choosing between steel and wrought iron fencing for your Arizona property? Modern steel fencing offers lower maintenance, better heat resistance, and comparable aesthetics at a lower cost.';
 $pageCanonical = $siteUrl . '/blog/steel-vs-wrought-iron-fencing-arizona/';
+$canonicalUrl = $pageCanonical;
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';

@@ -6,6 +6,7 @@ $currentPage = 'service-areas';
 $pageTitle = 'Service Areas | Custom Steel Fabrication | ' . $siteName;
 $pageDescription = 'Salt River Steel LLC serves Florence, Coolidge, Casa Grande, Apache Junction, and surrounding communities in Arizona with custom steel gates, fencing, and fabrication services.';
 $pageCanonical = $siteUrl . '/service-areas/';
+$canonicalUrl = $pageCanonical;
 $heroPreloadImage = '/assets/images/hero-home-1600.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';

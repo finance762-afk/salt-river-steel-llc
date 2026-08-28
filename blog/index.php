@@ -7,6 +7,7 @@ $currentPage = 'blog';
 $pageTitle = 'Blog | Steel Industry Insights & Project Guides | ' . $siteName;
 $pageDescription = 'Expert insights on custom steel gates, fencing, and fabrication. Cost guides, material comparisons, and steel construction tips for Arizona property owners.';
 $pageCanonical = $siteUrl . '/blog/';
+$canonicalUrl = $pageCanonical;
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';

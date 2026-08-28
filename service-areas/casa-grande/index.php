@@ -6,6 +6,7 @@ $currentPage = 'service-areas';
 $pageTitle = 'Steel Gates & Fencing in Casa Grande, AZ | Salt River Steel LLC';
 $pageDescription = 'Custom steel gates, fencing, and fabrication serving Casa Grande, Arizona. Commercial, residential & industrial steel work for Pinal County\'s largest city. Free estimates.';
 $pageCanonical = $siteUrl . '/service-areas/casa-grande/';
+$canonicalUrl = $pageCanonical;
 $heroPreloadImage = '/assets/images/custom-steel-gates-1600.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';

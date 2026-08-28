@@ -359,7 +359,7 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
         </ul>
       </div>
       <div class="sp-breakdown-img reveal-right">
-        <img src="/assets/images/home-hero-steel-construction.jpg"
+        <img src="/assets/images/home-hero-steel-construction-1600.webp"
              srcset="/assets/images/home-hero-steel-construction-480.webp 480w, /assets/images/home-hero-steel-construction-960.webp 960w, /assets/images/home-hero-steel-construction-1600.webp 1600w"
              sizes="(max-width: 900px) 100vw, 460px"
              alt="Residential steel sliding gate set into a block wall, fabricated by Salt River Steel in Florence, AZ"

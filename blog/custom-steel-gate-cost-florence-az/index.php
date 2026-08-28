@@ -10,6 +10,7 @@ $currentPage = 'blog';
 $pageTitle = 'Custom Steel Gate Cost in Florence, AZ (2026 Pricing)';
 $pageDescription = 'Custom steel gates in Florence, AZ cost $2,500–$8,000+ installed. Size, design complexity, automation, and materials drive pricing. Compare manual vs. automated options and get accurate estimates.';
 $pageCanonical = $siteUrl . '/blog/custom-steel-gate-cost-florence-az/';
+$canonicalUrl = $pageCanonical;
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';

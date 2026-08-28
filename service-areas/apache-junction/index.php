@@ -6,6 +6,7 @@ $currentPage = 'service-areas';
 $pageTitle = 'Steel Gates & Fencing in Apache Junction, AZ | Salt River Steel LLC';
 $pageDescription = 'Custom steel gates, railings, and residential metalwork in Apache Junction, AZ. Local fabrication serving eastern Valley homeowners. Free estimates.';
 $pageCanonical = $siteUrl . '/service-areas/apache-junction/';
+$canonicalUrl = $pageCanonical;
 $heroPreloadImage = '/assets/images/residential-steel-work-1600.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';

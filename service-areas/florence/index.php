@@ -6,6 +6,7 @@ $currentPage = 'service-areas';
 $pageTitle = 'Steel Gates & Fencing in Florence, AZ | Salt River Steel LLC';
 $pageDescription = 'Custom steel gates, fencing, and fabrication serving Florence, Arizona. Local fabrication shop on E Pot O Gold Trail. Commercial, residential & industrial steel work. Free estimates.';
 $pageCanonical = $siteUrl . '/service-areas/florence/';
+$canonicalUrl = $pageCanonical;
 $heroPreloadImage = '/assets/images/custom-steel-gates-1600.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
