@@ -41,6 +41,10 @@
     <!-- Self-hosted fonts (v6.2 — no Google Fonts CDN) -->
     <!-- Preload above-the-fold heading font -->
     <link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+    <?php if (!empty($heroPreloadImage)): ?>
+    <!-- Preload the LCP hero image (set by the page before including head.php) -->
+    <link rel="preload" href="<?php echo htmlspecialchars($heroPreloadImage); ?>" as="image" type="image/webp" fetchpriority="high">
+    <?php endif; ?>
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/framework.css?v=<?php echo $cssVersion; ?>">
