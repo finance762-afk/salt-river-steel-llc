@@ -12,7 +12,7 @@ $pageTitle        = 'About Us | Salt River Steel | Florence, AZ Steel Fabricatio
 $pageDescription  = 'Salt River Steel LLC has served Florence, AZ since 2022 with custom steel gates, fencing, and commercial, residential & industrial fabrication. Meet our team and learn our story.';
 $canonicalUrl     = $siteUrl . '/about/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/home-team-at-work.jpg';
+$ogImage          = $siteUrl . '/assets/images/crew-salt-river-steel-florence-og.jpg';
 
 /* ---------- BreadcrumbList schema ---------- */
 $schemaGraph = [
@@ -196,11 +196,11 @@ $schemaMarkup = '<script type="application/ld+json">' . json_encode($schemaGraph
                 </p>
             </div>
             <div class="story-image">
-                <img src="/assets/images/home-team-at-work.jpg"
-                     srcset="/assets/images/home-team-at-work-480.webp 480w, /assets/images/home-team-at-work-960.webp 960w, /assets/images/home-team-at-work-1600.webp 1600w"
+                <img src="/assets/images/crew-salt-river-steel-florence-960.webp"
+                     srcset="/assets/images/crew-salt-river-steel-florence-480.webp 480w, /assets/images/crew-salt-river-steel-florence-960.webp 960w, /assets/images/crew-salt-river-steel-florence-1440.webp 1440w"
                      sizes="(max-width: 900px) 100vw, 480px"
-                     alt="Salt River Steel team working on custom steel fabrication at their Florence, AZ shop"
-                     width="600" height="750" loading="lazy" decoding="async">
+                     alt="Salt River Steel LLC crew on a steel fence installation job in Central Arizona"
+                     width="600" height="450" loading="lazy" decoding="async">
                 <div class="story-badge">
                     <span class="big"><?php echo $yearEstablished; ?></span>
                     <span class="small">Est. in Florence</span>

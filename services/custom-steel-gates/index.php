@@ -16,7 +16,7 @@ $pageTitle       = 'Custom Steel Gates Florence AZ | Driveway, Entry & Security 
 $pageDescription = 'Custom steel driveway, entry, ranch, and security gates fabricated in Florence, AZ. Salt River Steel builds gates to fit your property and the desert climate. Free estimates — call (480) 450-6959.';
 $canonicalUrl    = $siteUrl . '/services/custom-steel-gates/';
 $pageCanonical   = $canonicalUrl;
-$ogImage         = $siteUrl . '/assets/images/custom-steel-gates.jpg';
+$ogImage         = $siteUrl . '/assets/images/custom-steel-ranch-entry-gate-og.jpg';
 $heroPreloadImage = '';
 
 /* ---------- Service-specific FAQs ---------- */
@@ -73,10 +73,10 @@ $breadcrumbSchema = [
 /* ---------- "Other services" (exclude current) ---------- */
 $otherServices = array_values(array_filter($services, fn($s) => $s['slug'] !== 'custom-steel-gates'));
 $otherMedia = [
-    'steel-fencing'                 => ['img' => 'steel-fencing',                 'icon' => 'ruler',      'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
-    'commercial-steel-construction' => ['img' => 'commercial-steel-construction', 'icon' => 'building-2', 'alt' => 'Commercial steel building near Florence, AZ'],
-    'residential-steel-work'        => ['img' => 'residential-steel-work',        'icon' => 'home',       'alt' => 'Residential steel work in Central Arizona'],
-    'industrial-steel-fabrication'  => ['img' => 'industrial-steel-fabrication',  'icon' => 'hammer',     'alt' => 'Industrial steel fabrication near Florence, AZ'],
+    'steel-fencing'                 => ['img' => 'steel-ranch-rail-fence-florence',                 'icon' => 'ruler',      'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
+    'commercial-steel-construction' => ['img' => 'commercial-steel-building-construction', 'icon' => 'building-2', 'alt' => 'Commercial steel building near Florence, AZ'],
+    'residential-steel-work'        => ['img' => 'residential-steel-casita-building',        'icon' => 'home',       'alt' => 'Residential steel work in Central Arizona'],
+    'industrial-steel-fabrication'  => ['img' => 'steel-frame-erection-red-iron',  'icon' => 'hammer',     'alt' => 'Industrial steel fabrication near Florence, AZ'],
 ];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
@@ -243,7 +243,7 @@ html.js-anim .reveal-up { opacity: 0; transform: translateY(28px); }
 html.js-anim .reveal-left { opacity: 0; transform: translateX(-34px); }
 html.js-anim .reveal-right { opacity: 0; transform: translateX(34px); }
 html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
-.reveal-up.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-scale.revealed { opacity: 1; transform: none; }
+html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-anim .reveal-right.revealed, html.js-anim .reveal-scale.revealed, .revealed { opacity: 1 !important; transform: none !important; }
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.18s; }
 .reveal-delay-3 { transition-delay: 0.28s; }
@@ -270,11 +270,11 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 <!-- 1. HERO -->
 <section class="sp-hero" aria-label="Custom steel gates in Florence, Arizona">
   <img class="sp-hero-bg"
-       src="/assets/images/custom-steel-gates.jpg"
-       srcset="/assets/images/custom-steel-gates-480.webp 480w, /assets/images/custom-steel-gates-960.webp 960w, /assets/images/custom-steel-gates-1600.webp 1600w"
+       src="/assets/images/custom-steel-ranch-entry-gate-960.webp"
+       srcset="/assets/images/custom-steel-ranch-entry-gate-480.webp 480w, /assets/images/custom-steel-ranch-entry-gate-960.webp 960w, /assets/images/custom-steel-ranch-entry-gate-1440.webp 1440w"
        sizes="100vw"
-       alt="Custom steel driveway gate fabricated and installed by Salt River Steel in Florence, Arizona"
-       width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async">
+       alt="Custom steel ranch entry gate with overhead header and wood-infill panels fabricated by Salt River Steel in Florence, AZ"
+       width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async">
   <div class="container">
     <div class="sp-hero-inner">
       <span class="eyebrow-label">Custom Steel Gates · Florence, AZ</span>
@@ -359,10 +359,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
         </ul>
       </div>
       <div class="sp-breakdown-img reveal-right">
-        <img src="/assets/images/home-hero-steel-construction-1600.webp"
-             srcset="/assets/images/home-hero-steel-construction-480.webp 480w, /assets/images/home-hero-steel-construction-960.webp 960w, /assets/images/home-hero-steel-construction-1600.webp 1600w"
+        <img src="/assets/images/steel-framed-wood-privacy-gate-960.webp"
+             srcset="/assets/images/steel-framed-wood-privacy-gate-480.webp 480w, /assets/images/steel-framed-wood-privacy-gate-960.webp 960w, /assets/images/steel-framed-wood-privacy-gate-1440.webp 1440w"
              sizes="(max-width: 900px) 100vw, 460px"
-             alt="Residential steel sliding gate set into a block wall, fabricated by Salt River Steel in Florence, AZ"
+             alt="Steel-framed wood privacy gate set into a block wall, fabricated by Salt River Steel"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
     </div>
@@ -411,10 +411,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
     </div>
     <div class="sp-proof-grid">
       <div class="sp-proof-img reveal-left">
-        <img src="/assets/images/about-fabrication.jpg"
-             srcset="/assets/images/about-fabrication-480.webp 480w, /assets/images/about-fabrication-960.webp 960w, /assets/images/about-fabrication-1600.webp 1600w"
+        <img src="/assets/images/steel-driveway-slide-gate-pavers-960.webp"
+             srcset="/assets/images/steel-driveway-slide-gate-pavers-480.webp 480w, /assets/images/steel-driveway-slide-gate-pavers-960.webp 960w, /assets/images/steel-driveway-slide-gate-pavers-1440.webp 1440w"
              sizes="(max-width: 860px) 100vw, 460px"
-             alt="Salt River Steel crew fabricating custom steelwork at a Central Arizona job site"
+             alt="Custom steel sliding driveway gate on a paver driveway installed by Salt River Steel in Florence, AZ"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
       <div class="reveal-right">
@@ -497,7 +497,7 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
       <?php foreach ($otherServices as $os): $m = $otherMedia[$os['slug']]; ?>
       <a href="/services/<?php echo $os['slug']; ?>/" class="sp-other-card reveal-up">
         <div class="sp-other-card__img">
-          <img src="/assets/images/<?php echo $m['img']; ?>.jpg"
+          <img src="/assets/images/<?php echo $m['img']; ?>-960.webp"
                srcset="/assets/images/<?php echo $m['img']; ?>-480.webp 480w, /assets/images/<?php echo $m['img']; ?>-960.webp 960w"
                sizes="(max-width: 520px) 100vw, (max-width: 900px) 50vw, 270px"
                alt="<?php echo htmlspecialchars($m['alt']); ?>"

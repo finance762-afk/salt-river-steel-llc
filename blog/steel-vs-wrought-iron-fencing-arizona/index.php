@@ -196,7 +196,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
 <style>
 /* Reuse blog post styles from first post */
-.blog-post__header { background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.05), rgba(var(--color-accent-rgb), 0.05)); padding: var(--space-3xl) 0 var(--space-2xl); }
+.blog-post__header { background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.05), rgba(var(--color-accent-rgb), 0.05)); padding: calc(var(--nav-height) + var(--space-8)) 0 var(--space-10); }
 .blog-post__category { display: inline-block; padding: var(--space-xs) var(--space-sm); background: linear-gradient(135deg, var(--color-accent), var(--color-secondary)); color: white; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; margin-bottom: var(--space-md); }
 .blog-post__title { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--space-md); text-wrap: balance; }
 .blog-post__meta { display: flex; gap: var(--space-sm); color: var(--color-text-light); font-size: 0.95rem; }

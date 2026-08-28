@@ -7,7 +7,7 @@ $pageTitle = 'Steel Gates & Fencing in Coolidge, AZ | Salt River Steel LLC';
 $pageDescription = 'Custom steel gates, fencing, and fabrication serving Coolidge, Arizona. Agricultural and residential steel work near Central Arizona College. Commercial & industrial fabrication. Free estimates.';
 $pageCanonical = $siteUrl . '/service-areas/coolidge/';
 $canonicalUrl = $pageCanonical;
-$heroPreloadImage = '/assets/images/custom-steel-gates-1600.webp';
+$heroPreloadImage = '/assets/images/custom-steel-ranch-entry-gate-1440.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
@@ -64,7 +64,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('/assets/images/custom-steel-gates.jpg');
+    background-image: url('/assets/images/custom-steel-ranch-entry-gate-1440.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.2;

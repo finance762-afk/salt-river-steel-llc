@@ -7,7 +7,7 @@ $pageTitle = 'Service Areas | Custom Steel Fabrication | ' . $siteName;
 $pageDescription = 'Salt River Steel LLC serves Florence, Coolidge, Casa Grande, Apache Junction, and surrounding communities in Arizona with custom steel gates, fencing, and fabrication services.';
 $pageCanonical = $siteUrl . '/service-areas/';
 $canonicalUrl = $pageCanonical;
-$heroPreloadImage = '/assets/images/hero-home-1600.webp';
+$heroPreloadImage = '/assets/images/hero-steel-building-florence-az-1600.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
@@ -39,14 +39,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 <section class="hero hero--service-areas">
     <div class="hero-bg">
         <img
-            src="/assets/images/hero-home-1600.webp"
-            srcset="/assets/images/hero-home-480.webp 480w,
-                    /assets/images/hero-home-960.webp 960w,
-                    /assets/images/hero-home-1600.webp 1600w"
+            src="/assets/images/hero-steel-building-florence-az-1600.webp"
+            srcset="/assets/images/hero-steel-building-florence-az-480.webp 480w, /assets/images/hero-steel-building-florence-az-960.webp 960w, /assets/images/hero-steel-building-florence-az-1600.webp 1600w"
             sizes="100vw"
-            alt="Steel fabrication serving Florence, Arizona and surrounding areas"
+            alt="Completed white steel building constructed by Salt River Steel LLC in Florence, Arizona"
             width="1600"
-            height="900"
+            height="1200"
             loading="eager"
             fetchpriority="high"
         >
@@ -90,14 +88,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
             <div class="service-area-card">
                 <div class="service-area-card__image">
                     <img
-                        src="/assets/images/custom-steel-gates-960.webp"
-                        srcset="/assets/images/custom-steel-gates-480.webp 480w,
-                                /assets/images/custom-steel-gates-960.webp 960w,
-                                /assets/images/custom-steel-gates-1600.webp 1600w"
+                        src="/assets/images/custom-steel-ranch-entry-gate-960.webp"
+                        srcset="/assets/images/custom-steel-ranch-entry-gate-480.webp 480w, /assets/images/custom-steel-ranch-entry-gate-960.webp 960w, /assets/images/custom-steel-ranch-entry-gate-1440.webp 1440w"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        alt="Custom steel gate installation in Florence, AZ"
+                        alt="Custom steel ranch entry gate with overhead header and wood-infill panels fabricated by Salt River Steel in Florence, AZ"
                         width="960"
-                        height="640"
+                        height="720"
                         loading="lazy"
                     >
                 </div>
@@ -121,14 +117,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
             <div class="service-area-card">
                 <div class="service-area-card__image">
                     <img
-                        src="/assets/images/steel-fencing-960.webp"
-                        srcset="/assets/images/steel-fencing-480.webp 480w,
-                                /assets/images/steel-fencing-960.webp 960w,
-                                /assets/images/steel-fencing-1600.webp 1600w"
+                        src="/assets/images/steel-ranch-rail-fence-florence-960.webp"
+                        srcset="/assets/images/steel-ranch-rail-fence-florence-480.webp 480w, /assets/images/steel-ranch-rail-fence-florence-960.webp 960w, /assets/images/steel-ranch-rail-fence-florence-1440.webp 1440w"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        alt="Steel fencing installation in Coolidge, AZ"
+                        alt="Three-rail steel ranch fencing installed by Salt River Steel in Florence, Arizona"
                         width="960"
-                        height="640"
+                        height="720"
                         loading="lazy"
                     >
                 </div>
@@ -152,14 +146,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
             <div class="service-area-card">
                 <div class="service-area-card__image">
                     <img
-                        src="/assets/images/commercial-steel-construction-960.webp"
-                        srcset="/assets/images/commercial-steel-construction-480.webp 480w,
-                                /assets/images/commercial-steel-construction-960.webp 960w,
-                                /assets/images/commercial-steel-construction-1600.webp 1600w"
+                        src="/assets/images/commercial-steel-building-construction-960.webp"
+                        srcset="/assets/images/commercial-steel-building-construction-480.webp 480w, /assets/images/commercial-steel-building-construction-960.webp 960w, /assets/images/commercial-steel-building-construction-1440.webp 1440w"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        alt="Commercial steel construction in Casa Grande, AZ"
+                        alt="Commercial steel building under construction with a telehandler lift, built by Salt River Steel near Florence, AZ"
                         width="960"
-                        height="640"
+                        height="720"
                         loading="lazy"
                     >
                 </div>
@@ -183,14 +175,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
             <div class="service-area-card">
                 <div class="service-area-card__image">
                     <img
-                        src="/assets/images/residential-steel-work-960.webp"
-                        srcset="/assets/images/residential-steel-work-480.webp 480w,
-                                /assets/images/residential-steel-work-960.webp 960w,
-                                /assets/images/residential-steel-work-1600.webp 1600w"
+                        src="/assets/images/steel-barn-building-florence-az-960.webp"
+                        srcset="/assets/images/steel-barn-building-florence-az-480.webp 480w, /assets/images/steel-barn-building-florence-az-960.webp 960w, /assets/images/steel-barn-building-florence-az-1440.webp 1440w"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        alt="Residential steel work in Apache Junction, AZ"
+                        alt="Steel barn with covered breezeway and horse stalls built by Salt River Steel in Florence, AZ"
                         width="960"
-                        height="640"
+                        height="720"
                         loading="lazy"
                     >
                 </div>

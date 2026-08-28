@@ -29,7 +29,7 @@
     <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($pageDescription); ?>">
     <meta property="og:url" content="<?php echo htmlspecialchars($pageCanonical); ?>">
-    <meta property="og:image" content="<?php echo $siteUrl; ?>/assets/images/logo.png">
+    <meta property="og:image" content="<?php echo $siteUrl; ?>/assets/images/og-salt-river-steel.jpg">
     <meta property="og:site_name" content="<?php echo htmlspecialchars($siteName); ?>">
     <meta property="og:locale" content="en_US">
     

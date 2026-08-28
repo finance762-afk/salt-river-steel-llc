@@ -7,7 +7,7 @@ $pageTitle = 'Steel Gates & Fencing in Apache Junction, AZ | Salt River Steel LL
 $pageDescription = 'Custom steel gates, railings, and residential metalwork in Apache Junction, AZ. Local fabrication serving eastern Valley homeowners. Free estimates.';
 $pageCanonical = $siteUrl . '/service-areas/apache-junction/';
 $canonicalUrl = $pageCanonical;
-$heroPreloadImage = '/assets/images/residential-steel-work-1600.webp';
+$heroPreloadImage = '/assets/images/residential-steel-casita-building-1440.webp';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
@@ -29,7 +29,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 <style>
 .hero--area-page { position: relative; min-height: 50vh; display: flex; align-items: center; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); overflow: hidden; }
 .hero--area-page::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)); z-index: 1; }
-.hero--area-page::after { content: ''; position: absolute; inset: 0; background-image: url('/assets/images/residential-steel-work.jpg'); background-size: cover; background-position: center; opacity: 0.2; z-index: 0; }
+.hero--area-page::after { content: ''; position: absolute; inset: 0; background-image: url('/assets/images/residential-steel-casita-building-1440.webp'); background-size: cover; background-position: center; opacity: 0.2; z-index: 0; }
 .hero--area-page .container { position: relative; z-index: 2; }
 .hero-area-content { max-width: 800px; color: white; padding: var(--space-4xl) 0; }
 .hero-area-content h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: var(--space-md); text-wrap: balance; }

@@ -16,7 +16,7 @@ $pageTitle       = 'Residential Steel Work Florence AZ | Railings, Stairs & Carp
 $pageDescription = 'Custom residential steel fabrication in Florence, AZ — railings, staircases, carports, patio covers, and architectural metalwork. Salt River Steel builds it locally for your home. Free estimates — call (480) 450-6959.';
 $canonicalUrl    = $siteUrl . '/services/residential-steel-work/';
 $pageCanonical   = $canonicalUrl;
-$ogImage         = $siteUrl . '/assets/images/residential-steel-work.jpg';
+$ogImage         = $siteUrl . '/assets/images/residential-steel-casita-building-og.jpg';
 $heroPreloadImage = '';
 
 /* ---------- Service-specific FAQs ---------- */
@@ -73,10 +73,10 @@ $breadcrumbSchema = [
 /* ---------- "Other services" (exclude current) ---------- */
 $otherServices = array_values(array_filter($services, fn($s) => $s['slug'] !== 'residential-steel-work'));
 $otherMedia = [
-    'custom-steel-gates'            => ['img' => 'custom-steel-gates',            'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate fabricated by Salt River Steel in Florence, AZ'],
-    'steel-fencing'                 => ['img' => 'steel-fencing',                 'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
-    'commercial-steel-construction' => ['img' => 'commercial-steel-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building near Florence, AZ'],
-    'industrial-steel-fabrication'  => ['img' => 'industrial-steel-fabrication',  'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
+    'custom-steel-gates'            => ['img' => 'custom-steel-ranch-entry-gate',            'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate fabricated by Salt River Steel in Florence, AZ'],
+    'steel-fencing'                 => ['img' => 'steel-ranch-rail-fence-florence',                 'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
+    'commercial-steel-construction' => ['img' => 'commercial-steel-building-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building near Florence, AZ'],
+    'industrial-steel-fabrication'  => ['img' => 'steel-frame-erection-red-iron',  'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
 ];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
@@ -241,7 +241,7 @@ html.js-anim .reveal-up { opacity: 0; transform: translateY(28px); }
 html.js-anim .reveal-left { opacity: 0; transform: translateX(-34px); }
 html.js-anim .reveal-right { opacity: 0; transform: translateX(34px); }
 html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
-.reveal-up.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-scale.revealed { opacity: 1; transform: none; }
+html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-anim .reveal-right.revealed, html.js-anim .reveal-scale.revealed, .revealed { opacity: 1 !important; transform: none !important; }
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.18s; }
 .reveal-delay-3 { transition-delay: 0.28s; }
@@ -268,11 +268,11 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 <!-- 1. HERO -->
 <section class="sp-hero" aria-label="Residential steel work in Florence, Arizona">
   <img class="sp-hero-bg"
-       src="/assets/images/residential-steel-work.jpg"
-       srcset="/assets/images/residential-steel-work-480.webp 480w, /assets/images/residential-steel-work-960.webp 960w, /assets/images/residential-steel-work-1600.webp 1600w"
+       src="/assets/images/residential-steel-casita-building-960.webp"
+       srcset="/assets/images/residential-steel-casita-building-480.webp 480w, /assets/images/residential-steel-casita-building-960.webp 960w, /assets/images/residential-steel-casita-building-1440.webp 1440w"
        sizes="100vw"
-       alt="Custom residential steel railing and metalwork fabricated by Salt River Steel in Florence, Arizona"
-       width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async">
+       alt="Residential corrugated-steel building with wood accents built by Salt River Steel in Central Arizona"
+       width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async">
   <div class="container">
     <div class="sp-hero-inner">
       <span class="eyebrow-label">Residential Steel Work · Florence, AZ</span>
@@ -357,10 +357,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
         </ul>
       </div>
       <div class="sp-breakdown-img reveal-right">
-        <img src="/assets/images/home-residential-steel.jpg"
-             srcset="/assets/images/home-residential-steel-480.webp 480w, /assets/images/home-residential-steel-960.webp 960w, /assets/images/home-residential-steel-1600.webp 1600w"
+        <img src="/assets/images/residential-patio-cover-pipe-rail-960.webp"
+             srcset="/assets/images/residential-patio-cover-pipe-rail-480.webp 480w, /assets/images/residential-patio-cover-pipe-rail-960.webp 960w, /assets/images/residential-patio-cover-pipe-rail-1440.webp 1440w"
              sizes="(max-width: 900px) 100vw, 460px"
-             alt="Custom steel staircase and railing installed in a Central Arizona home by Salt River Steel"
+             alt="Steel patio cover and white pipe-rail fencing on a Central Arizona home by Salt River Steel"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
     </div>
@@ -419,10 +419,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
     </div>
     <div class="sp-proof-grid">
       <div class="sp-proof-img reveal-left">
-        <img src="/assets/images/home-custom-steel-gate.jpg"
-             srcset="/assets/images/home-custom-steel-gate-480.webp 480w, /assets/images/home-custom-steel-gate-960.webp 960w, /assets/images/home-custom-steel-gate-1600.webp 1600w"
+        <img src="/assets/images/pool-ramada-steel-shade-structure-960.webp"
+             srcset="/assets/images/pool-ramada-steel-shade-structure-480.webp 480w, /assets/images/pool-ramada-steel-shade-structure-960.webp 960w, /assets/images/pool-ramada-steel-shade-structure-1440.webp 1440w"
              sizes="(max-width: 860px) 100vw, 460px"
-             alt="Custom residential steelwork fabricated and finished by Salt River Steel in Florence, AZ"
+             alt="Custom steel pool ramada shade structure built by Salt River Steel at an Arizona home"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
       <div class="reveal-right">
@@ -505,7 +505,7 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
       <?php foreach ($otherServices as $os): $m = $otherMedia[$os['slug']]; ?>
       <a href="/services/<?php echo $os['slug']; ?>/" class="sp-other-card reveal-up">
         <div class="sp-other-card__img">
-          <img src="/assets/images/<?php echo $m['img']; ?>.jpg"
+          <img src="/assets/images/<?php echo $m['img']; ?>-960.webp"
                srcset="/assets/images/<?php echo $m['img']; ?>-480.webp 480w, /assets/images/<?php echo $m['img']; ?>-960.webp 960w"
                sizes="(max-width: 520px) 100vw, (max-width: 900px) 50vw, 270px"
                alt="<?php echo htmlspecialchars($m['alt']); ?>"

@@ -13,7 +13,7 @@ $pageTitle       = 'Steel Fencing Florence AZ | Ranch, Privacy & Security Fence 
 $pageDescription = 'Steel and wrought-iron fencing for Florence, AZ homes, ranches, and businesses. Salt River Steel fabricates ranch-rail, privacy, and security fence built for the desert. Free estimates — (480) 450-6959.';
 $canonicalUrl    = $siteUrl . '/services/steel-fencing/';
 $pageCanonical   = $canonicalUrl;
-$ogImage         = $siteUrl . '/assets/images/steel-fencing.jpg';
+$ogImage         = $siteUrl . '/assets/images/steel-ranch-rail-fence-florence-og.jpg';
 $heroPreloadImage = '';
 
 /* ---------- Service-specific FAQs ---------- */
@@ -70,10 +70,10 @@ $breadcrumbSchema = [
 /* ---------- "Other services" (exclude current) ---------- */
 $otherServices = array_values(array_filter($services, fn($s) => $s['slug'] !== 'steel-fencing'));
 $otherMedia = [
-    'custom-steel-gates'            => ['img' => 'custom-steel-gates',            'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate in Florence, AZ'],
-    'commercial-steel-construction' => ['img' => 'commercial-steel-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building near Florence, AZ'],
-    'residential-steel-work'        => ['img' => 'residential-steel-work',        'icon' => 'home',         'alt' => 'Residential steel work in Central Arizona'],
-    'industrial-steel-fabrication'  => ['img' => 'industrial-steel-fabrication',  'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
+    'custom-steel-gates'            => ['img' => 'custom-steel-ranch-entry-gate',            'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate in Florence, AZ'],
+    'commercial-steel-construction' => ['img' => 'commercial-steel-building-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building near Florence, AZ'],
+    'residential-steel-work'        => ['img' => 'residential-steel-casita-building',        'icon' => 'home',         'alt' => 'Residential steel work in Central Arizona'],
+    'industrial-steel-fabrication'  => ['img' => 'steel-frame-erection-red-iron',  'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
 ];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
@@ -237,7 +237,7 @@ html.js-anim .reveal-up { opacity: 0; transform: translateY(28px); }
 html.js-anim .reveal-left { opacity: 0; transform: translateX(-34px); }
 html.js-anim .reveal-right { opacity: 0; transform: translateX(34px); }
 html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
-.reveal-up.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-scale.revealed { opacity: 1; transform: none; }
+html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-anim .reveal-right.revealed, html.js-anim .reveal-scale.revealed, .revealed { opacity: 1 !important; transform: none !important; }
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.18s; }
 .reveal-delay-3 { transition-delay: 0.28s; }
@@ -264,11 +264,11 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 <!-- 1. HERO -->
 <section class="sp-hero" aria-label="Steel fencing in Florence, Arizona">
   <img class="sp-hero-bg"
-       src="/assets/images/steel-fencing.jpg"
-       srcset="/assets/images/steel-fencing-480.webp 480w, /assets/images/steel-fencing-960.webp 960w, /assets/images/steel-fencing-1600.webp 1600w"
+       src="/assets/images/steel-ranch-rail-fence-florence-960.webp"
+       srcset="/assets/images/steel-ranch-rail-fence-florence-480.webp 480w, /assets/images/steel-ranch-rail-fence-florence-960.webp 960w, /assets/images/steel-ranch-rail-fence-florence-1440.webp 1440w"
        sizes="100vw"
-       alt="Steel ranch-rail fencing installed by Salt River Steel on a desert property near Florence, Arizona"
-       width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async">
+       alt="Three-rail steel ranch fencing installed by Salt River Steel in Florence, Arizona"
+       width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async">
   <div class="container">
     <div class="sp-hero-inner">
       <span class="eyebrow-label">Steel Fencing · Florence, AZ</span>
@@ -338,10 +338,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
   <div class="container">
     <div class="sp-breakdown-grid">
       <div class="sp-breakdown-img order-first reveal-left">
-        <img src="/assets/images/home-team-at-work.jpg"
-             srcset="/assets/images/home-team-at-work-480.webp 480w, /assets/images/home-team-at-work-960.webp 960w, /assets/images/home-team-at-work-1600.webp 1600w"
+        <img src="/assets/images/corrugated-steel-privacy-fence-960.webp"
+             srcset="/assets/images/corrugated-steel-privacy-fence-480.webp 480w, /assets/images/corrugated-steel-privacy-fence-960.webp 960w, /assets/images/corrugated-steel-privacy-fence-1440.webp 1440w"
              sizes="(max-width: 900px) 100vw, 420px"
-             alt="Wire-mesh field fencing with steel T-posts securing a rural property line near Florence, AZ"
+             alt="Corrugated steel privacy fence installed by Salt River Steel in Central Arizona"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
       <div class="reveal-right">
@@ -405,10 +405,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
     </div>
     <div class="sp-proof-grid">
       <div class="sp-proof-img reveal-left">
-        <img src="/assets/images/about-fabrication.jpg"
-             srcset="/assets/images/about-fabrication-480.webp 480w, /assets/images/about-fabrication-960.webp 960w, /assets/images/about-fabrication-1600.webp 1600w"
+        <img src="/assets/images/crew-setting-steel-posts-lift-960.webp"
+             srcset="/assets/images/crew-setting-steel-posts-lift-480.webp 480w, /assets/images/crew-setting-steel-posts-lift-960.webp 960w, /assets/images/crew-setting-steel-posts-lift-1440.webp 1440w"
              sizes="(max-width: 860px) 100vw, 460px"
-             alt="Salt River Steel crew fabricating steel at a Central Arizona job site"
+             alt="Salt River Steel crew member setting steel fence posts from a lift on a Pinal County property"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
       <div class="reveal-right">
@@ -491,7 +491,7 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
       <?php foreach ($otherServices as $os): $m = $otherMedia[$os['slug']]; ?>
       <a href="/services/<?php echo $os['slug']; ?>/" class="sp-other-card reveal-up">
         <div class="sp-other-card__img">
-          <img src="/assets/images/<?php echo $m['img']; ?>.jpg"
+          <img src="/assets/images/<?php echo $m['img']; ?>-960.webp"
                srcset="/assets/images/<?php echo $m['img']; ?>-480.webp 480w, /assets/images/<?php echo $m['img']; ?>-960.webp 960w"
                sizes="(max-width: 520px) 100vw, (max-width: 900px) 50vw, 270px"
                alt="<?php echo htmlspecialchars($m['alt']); ?>"

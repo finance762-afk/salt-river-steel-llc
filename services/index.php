@@ -27,27 +27,27 @@ $serviceIcons = [
  * is a livestock pen, home-commercial-building is a pool fence, etc.) — do NOT use them. */
 $serviceCards = [
     'custom-steel-gates' => [
-        'img'  => 'custom-steel-gates',
+        'img'  => 'custom-steel-ranch-entry-gate',
         'alt'  => 'Solar-powered steel ranch driveway gate across a paver drive at a Florence, AZ desert home',
         'bul'  => ['Driveway, entry & security gates', 'Built to your exact opening', 'Powder-coat & finish options'],
     ],
     'steel-fencing' => [
-        'img'  => 'steel-fencing',
+        'img'  => 'steel-ranch-rail-fence-florence',
         'alt'  => 'Welded steel ranch-rail fence enclosing a Florence, AZ property',
         'bul'  => ['Ranch, privacy & security fence', 'Corrugated & wrought-iron styles', 'Corrosion-resistant desert builds'],
     ],
     'commercial-steel-construction' => [
-        'img'  => 'commercial-steel-construction',
+        'img'  => 'commercial-steel-building-construction',
         'alt'  => 'Corrugated steel building with roll-up openings fabricated by Salt River Steel in Central Arizona',
         'bul'  => ['Structural steel fabrication', 'Buildings, frames & supports', 'Contractor & architect partner'],
     ],
     'residential-steel-work' => [
-        'img'  => 'residential-steel-work',
+        'img'  => 'residential-steel-casita-building',
         'alt'  => 'Custom corrugated steel-clad structure built by Salt River Steel at a Florence, AZ home',
         'bul'  => ['Carports, ramadas & railings', 'Architectural metalwork', 'Custom one-off fabrication'],
     ],
     'industrial-steel-fabrication' => [
-        'img'  => 'industrial-steel-fabrication',
+        'img'  => 'steel-frame-erection-red-iron',
         'alt'  => 'Excavator trenching for steel foundation work on a Central Arizona job site',
         'bul'  => ['Heavy-duty structural welding', 'Equipment & job-site steel', 'Rush & expedited fabrication'],
     ],
@@ -130,7 +130,7 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
   padding: 168px 0 clamp(3.5rem, 8vh, 6rem);
   background-image:
     linear-gradient(120deg, rgba(var(--color-primary-rgb), 0.95) 0%, rgba(var(--color-primary-rgb), 0.78) 52%, rgba(var(--color-secondary-rgb), 0.62) 100%),
-    url('/assets/images/home-hero-steel-construction-1600.webp');
+    url('/assets/images/hero-steel-building-florence-az-1600.webp');
   background-size: cover; background-position: center;
   color: var(--color-white);
 }
@@ -361,8 +361,8 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
       ?>
       <article class="service-card-with-image card-tint-<?php echo $tint; ?> reveal-up reveal-delay-<?php echo $delay; ?>" data-animate>
         <div class="service-card__image">
-          <img src="/assets/images/<?php echo $card['img']; ?>.jpg"
-               srcset="/assets/images/<?php echo $card['img']; ?>-480.webp 480w, /assets/images/<?php echo $card['img']; ?>-960.webp 960w, /assets/images/<?php echo $card['img']; ?>-1600.webp 1600w"
+          <img src="/assets/images/<?php echo $card['img']; ?>-960.webp"
+               srcset="/assets/images/<?php echo $card['img']; ?>-480.webp 480w, /assets/images/<?php echo $card['img']; ?>-960.webp 960w, /assets/images/<?php echo $card['img']; ?>-1440.webp 1440w"
                sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 380px"
                alt="<?php echo htmlspecialchars($card['alt']); ?>" width="600" height="360" loading="lazy">
         </div>

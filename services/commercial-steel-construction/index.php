@@ -16,7 +16,7 @@ $pageTitle       = 'Commercial Steel Construction Florence AZ | Structural Steel
 $pageDescription = 'Structural steel fabrication and installation for commercial buildings in Florence, AZ — beams, columns, mezzanines, canopies, and stairs. Salt River Steel builds and erects it locally. Free estimates — call (480) 450-6959.';
 $canonicalUrl    = $siteUrl . '/services/commercial-steel-construction/';
 $pageCanonical   = $canonicalUrl;
-$ogImage         = $siteUrl . '/assets/images/commercial-steel-construction.jpg';
+$ogImage         = $siteUrl . '/assets/images/commercial-steel-building-construction-og.jpg';
 $heroPreloadImage = '';
 
 /* ---------- Service-specific FAQs ---------- */
@@ -73,10 +73,10 @@ $breadcrumbSchema = [
 /* ---------- "Other services" (exclude current) ---------- */
 $otherServices = array_values(array_filter($services, fn($s) => $s['slug'] !== 'commercial-steel-construction'));
 $otherMedia = [
-    'custom-steel-gates'           => ['img' => 'custom-steel-gates',           'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate fabricated by Salt River Steel in Florence, AZ'],
-    'steel-fencing'                => ['img' => 'steel-fencing',                'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
-    'residential-steel-work'       => ['img' => 'residential-steel-work',       'icon' => 'home',         'alt' => 'Residential steel work in Central Arizona'],
-    'industrial-steel-fabrication' => ['img' => 'industrial-steel-fabrication', 'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
+    'custom-steel-gates'           => ['img' => 'custom-steel-ranch-entry-gate',           'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate fabricated by Salt River Steel in Florence, AZ'],
+    'steel-fencing'                => ['img' => 'steel-ranch-rail-fence-florence',                'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing on a Florence-area desert property'],
+    'residential-steel-work'       => ['img' => 'residential-steel-casita-building',       'icon' => 'home',         'alt' => 'Residential steel work in Central Arizona'],
+    'industrial-steel-fabrication' => ['img' => 'steel-frame-erection-red-iron', 'icon' => 'hammer',       'alt' => 'Industrial steel fabrication near Florence, AZ'],
 ];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
@@ -248,7 +248,7 @@ html.js-anim .reveal-up { opacity: 0; transform: translateY(28px); }
 html.js-anim .reveal-left { opacity: 0; transform: translateX(-34px); }
 html.js-anim .reveal-right { opacity: 0; transform: translateX(34px); }
 html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
-.reveal-up.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-scale.revealed { opacity: 1; transform: none; }
+html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-anim .reveal-right.revealed, html.js-anim .reveal-scale.revealed, .revealed { opacity: 1 !important; transform: none !important; }
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.18s; }
 .reveal-delay-3 { transition-delay: 0.28s; }
@@ -275,11 +275,11 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 <!-- 1. HERO -->
 <section class="sp-hero" aria-label="Commercial steel construction in Florence, Arizona">
   <img class="sp-hero-bg"
-       src="/assets/images/commercial-steel-construction.jpg"
-       srcset="/assets/images/commercial-steel-construction-480.webp 480w, /assets/images/commercial-steel-construction-960.webp 960w, /assets/images/commercial-steel-construction-1600.webp 1600w"
+       src="/assets/images/commercial-steel-building-construction-960.webp"
+       srcset="/assets/images/commercial-steel-building-construction-480.webp 480w, /assets/images/commercial-steel-building-construction-960.webp 960w, /assets/images/commercial-steel-building-construction-1440.webp 1440w"
        sizes="100vw"
-       alt="Structural steel frame of a commercial building erected by Salt River Steel in Florence, Arizona"
-       width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async">
+       alt="Commercial steel building under construction with a telehandler lift, built by Salt River Steel near Florence, AZ"
+       width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async">
   <div class="container">
     <div class="sp-hero-inner">
       <span class="eyebrow-label">Commercial Steel Construction · Florence, AZ</span>
@@ -364,10 +364,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
         </ul>
       </div>
       <div class="sp-breakdown-img reveal-right">
-        <img src="/assets/images/home-commercial-building.jpg"
-             srcset="/assets/images/home-commercial-building-480.webp 480w, /assets/images/home-commercial-building-960.webp 960w, /assets/images/home-commercial-building-1600.webp 1600w"
+        <img src="/assets/images/commercial-parking-structure-steelwork-960.webp"
+             srcset="/assets/images/commercial-parking-structure-steelwork-480.webp 480w, /assets/images/commercial-parking-structure-steelwork-960.webp 960w, /assets/images/commercial-parking-structure-steelwork-1440.webp 1440w"
              sizes="(max-width: 900px) 100vw, 460px"
-             alt="Completed commercial building with structural steel framing by Salt River Steel near Florence, AZ"
+             alt="Salt River Steel crew installing steel inside a commercial parking structure in Arizona"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
     </div>
@@ -424,10 +424,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
     </div>
     <div class="sp-proof-grid">
       <div class="sp-proof-img reveal-left">
-        <img src="/assets/images/home-hero-steel-construction-1600.webp"
-             srcset="/assets/images/home-hero-steel-construction-480.webp 480w, /assets/images/home-hero-steel-construction-960.webp 960w, /assets/images/home-hero-steel-construction-1600.webp 1600w"
+        <img src="/assets/images/commercial-parking-garage-steel-install-960.webp"
+             srcset="/assets/images/commercial-parking-garage-steel-install-480.webp 480w, /assets/images/commercial-parking-garage-steel-install-960.webp 960w, /assets/images/commercial-parking-garage-steel-install-1440.webp 1440w"
              sizes="(max-width: 860px) 100vw, 460px"
-             alt="Salt River Steel structural steel erected on a Central Arizona commercial job site"
+             alt="Steel installation in progress inside a commercial parking garage, a Salt River Steel commercial project"
              width="600" height="450" loading="lazy" decoding="async">
       </div>
       <div class="reveal-right">
@@ -510,7 +510,7 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
       <?php foreach ($otherServices as $os): $m = $otherMedia[$os['slug']]; ?>
       <a href="/services/<?php echo $os['slug']; ?>/" class="sp-other-card reveal-up">
         <div class="sp-other-card__img">
-          <img src="/assets/images/<?php echo $m['img']; ?>.jpg"
+          <img src="/assets/images/<?php echo $m['img']; ?>-960.webp"
                srcset="/assets/images/<?php echo $m['img']; ?>-480.webp 480w, /assets/images/<?php echo $m['img']; ?>-960.webp 960w"
                sizes="(max-width: 520px) 100vw, (max-width: 900px) 50vw, 270px"
                alt="<?php echo htmlspecialchars($m['alt']); ?>"

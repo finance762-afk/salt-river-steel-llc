@@ -15,7 +15,7 @@ $pageTitle        = 'Steel Gates, Fencing & Construction | Salt River Steel | Fl
 $pageDescription  = 'Salt River Steel LLC builds custom steel gates, fencing, and commercial, residential & industrial steel in Florence, AZ. Local fabrication, same-week delivery. Free estimates.';
 $canonicalUrl     = $siteUrl . '/';
 $pageCanonical    = $canonicalUrl;                 // head.php reads $pageCanonical
-$ogImage          = $siteUrl . '/assets/images/hero-home.jpg';
+$ogImage          = $siteUrl . '/assets/images/og-salt-river-steel.jpg';
 $heroPreloadImage = '';                            // hero is a discoverable <img fetchpriority="high"> — no separate preload
 
 /* ---------- Homepage FAQs (from research_brief + one local item; all factual) ---------- */
@@ -57,11 +57,11 @@ $processSteps = [
 
 /* ---------- Service card media (pixel-verified slug photos on disk) + icons + bullets ---------- */
 $serviceMedia = [
-    'custom-steel-gates'            => ['img' => 'custom-steel-gates',            'icon' => 'shield-check', 'alt' => 'Custom steel driveway gate installed across a paver drive in Florence, AZ',              'bullets' => ['Driveway & entry gates', 'Security & ranch gates', 'Built to fit your property']],
-    'steel-fencing'                 => ['img' => 'steel-fencing',                 'icon' => 'ruler',        'alt' => 'Steel ranch-rail fencing installed on a Florence-area desert property',                 'bullets' => ['Ranch & property fencing', 'Wrought-iron & tube steel', 'Corrosion-resistant finishes']],
-    'commercial-steel-construction' => ['img' => 'commercial-steel-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building with roll-up door built by Salt River Steel near Florence, AZ',  'bullets' => ['Structural steel framing', 'Commercial buildings & shops', 'Contractor-ready delivery']],
-    'residential-steel-work'        => ['img' => 'residential-steel-work',        'icon' => 'home',         'alt' => 'Residential steel-sided building addition built in Central Arizona',                    'bullets' => ['Railings, stairs & carports', 'Metal-clad additions', 'Architectural metalwork']],
-    'industrial-steel-fabrication'  => ['img' => 'industrial-steel-fabrication',  'icon' => 'hammer',       'alt' => 'Site excavation and heavy steel work for an industrial project near Florence, AZ',      'bullets' => ['Heavy-duty fabrication', 'Certified welding', 'Job-site-tough builds']],
+    'custom-steel-gates'            => ['img' => 'custom-steel-ranch-entry-gate',            'icon' => 'shield-check', 'alt' => 'Custom steel ranch entry gate with overhead header and wood-infill panels fabricated by Salt River Steel in Florence, AZ',              'bullets' => ['Driveway & entry gates', 'Security & ranch gates', 'Built to fit your property']],
+    'steel-fencing'                 => ['img' => 'steel-ranch-rail-fence-florence',                 'icon' => 'ruler',        'alt' => 'Three-rail steel ranch fencing installed by Salt River Steel in Florence, Arizona',                 'bullets' => ['Ranch & property fencing', 'Wrought-iron & tube steel', 'Corrosion-resistant finishes']],
+    'commercial-steel-construction' => ['img' => 'commercial-steel-building-construction', 'icon' => 'building-2',   'alt' => 'Commercial steel building under construction with a telehandler lift, built by Salt River Steel near Florence, AZ',  'bullets' => ['Structural steel framing', 'Commercial buildings & shops', 'Contractor-ready delivery']],
+    'residential-steel-work'        => ['img' => 'residential-steel-casita-building',        'icon' => 'home',         'alt' => 'Residential corrugated-steel building with wood accents built by Salt River Steel in Central Arizona',                    'bullets' => ['Railings, stairs & carports', 'Metal-clad additions', 'Architectural metalwork']],
+    'industrial-steel-fabrication'  => ['img' => 'steel-frame-erection-red-iron',  'icon' => 'hammer',       'alt' => 'Red-iron steel building frame being erected by Salt River Steel in Florence, Arizona',      'bullets' => ['Heavy-duty fabrication', 'Certified welding', 'Job-site-tough builds']],
 ];
 
 /* ---------- Why-us proof cards (differentiators — NO fabricated reviews; reviews array is empty) ---------- */
@@ -420,7 +420,7 @@ html.js-anim .reveal-up { opacity: 0; transform: translateY(28px); }
 html.js-anim .reveal-left { opacity: 0; transform: translateX(-34px); }
 html.js-anim .reveal-right { opacity: 0; transform: translateX(34px); }
 html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
-.reveal-up.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-scale.revealed { opacity: 1; transform: none; }
+html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-anim .reveal-right.revealed, html.js-anim .reveal-scale.revealed, .revealed { opacity: 1 !important; transform: none !important; }
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.18s; }
 .reveal-delay-3 { transition-delay: 0.28s; }
@@ -642,10 +642,10 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
 <section class="hero-modern" aria-label="Salt River Steel — custom steel in Florence, Arizona">
     <img
         class="hero-bg-img"
-        src="/assets/images/hero-home.jpg"
-        srcset="/assets/images/hero-home-480.webp 480w, /assets/images/hero-home-960.webp 960w, /assets/images/hero-home-1600.webp 1600w"
+        src="/assets/images/hero-steel-building-florence-az-1600.webp"
+        srcset="/assets/images/hero-steel-building-florence-az-480.webp 480w, /assets/images/hero-steel-building-florence-az-960.webp 960w, /assets/images/hero-steel-building-florence-az-1600.webp 1600w"
         sizes="100vw"
-        alt="Completed custom steel building constructed by Salt River Steel in Florence, Arizona"
+        alt="Completed white steel building constructed by Salt River Steel LLC in Florence, Arizona"
         width="1600" height="1200"
         loading="eager" fetchpriority="high" decoding="async">
 
@@ -763,8 +763,8 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
             ?>
             <article class="service-card-with-image card-tint-<?php echo $tint; ?> reveal-up reveal-delay-<?php echo $delay; ?>">
                 <div class="service-card__image">
-                    <img src="/assets/images/<?php echo $img; ?>.jpg"
-                         srcset="/assets/images/<?php echo $img; ?>-480.webp 480w, /assets/images/<?php echo $img; ?>-960.webp 960w, /assets/images/<?php echo $img; ?>-1600.webp 1600w"
+                    <img src="/assets/images/<?php echo $img; ?>-960.webp"
+                         srcset="/assets/images/<?php echo $img; ?>-480.webp 480w, /assets/images/<?php echo $img; ?>-960.webp 960w, /assets/images/<?php echo $img; ?>-1440.webp 1440w"
                          sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 300px"
                          alt="<?php echo htmlspecialchars($media['alt']); ?>"
                          width="600" height="360" loading="lazy" decoding="async">
@@ -860,11 +860,11 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
             </div>
 
             <div class="about-right reveal-right">
-                <img src="/assets/images/about-fabrication.jpg"
-                     srcset="/assets/images/about-fabrication-480.webp 480w, /assets/images/about-fabrication-960.webp 960w, /assets/images/about-fabrication-1600.webp 1600w"
+                <img src="/assets/images/crew-salt-river-steel-florence-960.webp"
+                     srcset="/assets/images/crew-salt-river-steel-florence-480.webp 480w, /assets/images/crew-salt-river-steel-florence-960.webp 960w, /assets/images/crew-salt-river-steel-florence-1440.webp 1440w"
                      sizes="(max-width: 900px) 100vw, 460px"
-                     alt="Salt River Steel crew fabricating custom steelwork at a Central Arizona job site"
-                     width="600" height="800" loading="lazy" decoding="async">
+                     alt="Salt River Steel LLC crew on a steel fence installation job in Central Arizona"
+                     width="600" height="450" loading="lazy" decoding="async">
                 <div class="about-stat-card">
                     <span class="big"><?php echo $yearEstablished; ?></span>
                     <span class="small">Family-Owned<br>in Florence, AZ</span>
