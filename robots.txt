@@ -1,0 +1,40 @@
+# robots.txt — Salt River Steel LLC
+# Allow all legitimate crawlers (including AI bots for AEO visibility)
+
+User-agent: *
+Allow: /
+
+# Disallow thank-you page (no SEO value; user-only destination)
+Disallow: /thank-you/
+
+# Disallow includes and assets directories (no indexable content)
+Disallow: /includes/
+Disallow: /assets/
+
+# AI Crawlers (explicitly allow for AEO visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap
+Sitemap: https://salt-river-steel-llc.pageone.cloud/sitemap.xml

@@ -208,6 +208,20 @@ $tickerItems = [
   box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.14);
 }
 .btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* Compact TCPA consent checkbox (hero/inline form pattern) */
+.p1-consent-line {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  font-size: var(--font-size-xs); line-height: 1.5; color: var(--color-gray-dark);
+  margin: var(--space-4) 0 var(--space-3); cursor: pointer;
+}
+.p1-consent-line input[type="checkbox"] {
+  width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0;
+  accent-color: var(--color-primary); cursor: pointer;
+}
+.p1-consent-line span { flex: 1; }
+.p1-consent-line a { color: var(--color-primary); text-decoration: underline; }
+
 .form-footnote { font-size: var(--font-size-xs); color: var(--color-gray); text-align: center; margin: var(--space-3) 0 0; line-height: 1.5; }
 .form-footnote a { color: var(--color-primary); text-decoration: underline; }
 
@@ -575,6 +589,13 @@ html.js-anim .reveal-scale { opacity: 0; transform: scale(0.94); }
                         <option value="Other / Custom Fabrication">Other / Custom Fabrication</option>
                     </select>
                 </div>
+
+                <!-- TCPA v2.1 Consent (compact hero/inline pattern) -->
+                <label class="p1-consent-line">
+                    <input type="checkbox" name="terms_accepted" value="yes" required>
+                    <span>I agree to the <a href="/terms/">Terms of Service</a> and <a href="/privacy-policy/">Privacy Policy</a> and consent to be contacted about my request. *</span>
+                </label>
+
                 <button type="submit" class="btn btn-primary btn-block">Get My Free Estimate</button>
                 <p class="form-footnote">By submitting, you agree to our <a href="/terms/">Terms</a> and <a href="/privacy-policy/">Privacy Policy</a>.</p>
             </form>
