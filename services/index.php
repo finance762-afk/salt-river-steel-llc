@@ -21,30 +21,33 @@ $serviceIcons = [
     'residential-steel-work'         => 'hard-hat',
     'industrial-steel-fabrication'   => 'wrench',
 ];
+/* NOTE: card photos use the slug-named files, which are the content-accurate,
+ * pixel-verified images. The home-*.jpg variants are mislabeled (home-custom-steel-gate
+ * is a livestock pen, home-commercial-building is a pool fence, etc.) — do NOT use them. */
 $serviceCards = [
     'custom-steel-gates' => [
-        'img'  => 'home-custom-steel-gate',
-        'alt'  => 'Custom-fabricated dark steel driveway gate installed at a Florence, AZ property',
+        'img'  => 'custom-steel-gates',
+        'alt'  => 'Solar-powered steel ranch driveway gate across a paver drive at a Florence, AZ desert home',
         'bul'  => ['Driveway, entry & security gates', 'Built to your exact opening', 'Powder-coat & finish options'],
     ],
     'steel-fencing' => [
-        'img'  => 'home-steel-fence',
-        'alt'  => 'Tall corrugated steel privacy fence built by Salt River Steel in Florence, AZ',
+        'img'  => 'steel-fencing',
+        'alt'  => 'Welded steel ranch-rail fence enclosing a Florence, AZ property',
         'bul'  => ['Ranch, privacy & security fence', 'Corrugated & wrought-iron styles', 'Corrosion-resistant desert builds'],
     ],
     'commercial-steel-construction' => [
-        'img'  => 'home-commercial-building',
-        'alt'  => 'Completed commercial steel building fabricated by Salt River Steel in Central Arizona',
+        'img'  => 'commercial-steel-construction',
+        'alt'  => 'Corrugated steel building with roll-up openings fabricated by Salt River Steel in Central Arizona',
         'bul'  => ['Structural steel fabrication', 'Buildings, frames & supports', 'Contractor & architect partner'],
     ],
     'residential-steel-work' => [
-        'img'  => 'home-residential-steel',
-        'alt'  => 'Custom residential steel shade structure and metalwork in Florence, AZ',
+        'img'  => 'residential-steel-work',
+        'alt'  => 'Custom corrugated steel-clad structure built by Salt River Steel at a Florence, AZ home',
         'bul'  => ['Carports, ramadas & railings', 'Architectural metalwork', 'Custom one-off fabrication'],
     ],
     'industrial-steel-fabrication' => [
-        'img'  => 'home-industrial-fabrication',
-        'alt'  => 'Heavy industrial steel fabrication and site work by Salt River Steel in Central Arizona',
+        'img'  => 'industrial-steel-fabrication',
+        'alt'  => 'Excavator trenching for steel foundation work on a Central Arizona job site',
         'bul'  => ['Heavy-duty structural welding', 'Equipment & job-site steel', 'Rush & expedited fabrication'],
     ],
 ];
