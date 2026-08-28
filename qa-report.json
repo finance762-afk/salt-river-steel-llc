@@ -2335,7 +2335,7 @@
     {
       "status": "fail",
       "check": "Hero image \u2264150KB",
-      "detail": "home-hero-steel-construction.jpg: 367KB (hero-named; budget 150KB)",
+      "detail": "hero-home.jpg: 248KB (hero-named; budget 150KB)",
       "file": "",
       "severity": "blocker",
       "expected": null,
@@ -2799,7 +2799,7 @@
     {
       "status": "fail",
       "check": "Hero image \u2264150KB",
-      "detail": "home-hero-steel-construction.jpg: 367KB (hero-named; budget 150KB)",
+      "detail": "hero-home.jpg: 248KB (hero-named; budget 150KB)",
       "file": "",
       "severity": "blocker",
       "expected": null,
