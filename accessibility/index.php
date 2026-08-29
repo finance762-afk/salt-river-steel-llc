@@ -12,7 +12,7 @@ $pageTitle        = 'Accessibility Statement | Salt River Steel LLC';
 $pageDescription  = 'Our commitment to digital accessibility. Salt River Steel LLC strives to meet WCAG 2.1 Level AA standards for all visitors.';
 $canonicalUrl     = $siteUrl . '/accessibility/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 
 $lastUpdated      = date('F j, Y');
 

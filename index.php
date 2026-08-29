@@ -64,6 +64,22 @@ $serviceMedia = [
     'industrial-steel-fabrication'  => ['img' => 'steel-frame-erection-red-iron',  'icon' => 'hammer',       'alt' => 'Red-iron steel building frame being erected by Salt River Steel in Florence, Arizona',      'bullets' => ['Heavy-duty fabrication', 'Certified welding', 'Job-site-tough builds']],
 ];
 
+/* Recent-work gallery — every photo is a Salt River Steel job from the client's own photo pool. */
+$galleryItems = [
+    ['img' => 'steel-shop-building-dusk-florence',   'wide' => true,  'tag' => 'Steel Buildings', 'caption' => 'Two-bay steel shop, lit up after the slab pour',           'alt' => 'Steel shop building with two roll-up bays lit at dusk, built by Salt River Steel near Florence, AZ'],
+    ['img' => 'mare-motel-stalls-covered',           'wide' => false, 'tag' => 'Barns',           'caption' => 'Covered mare motel with welded pipe stalls',              'alt' => 'Covered mare motel with pipe stall panels built by Salt River Steel in Central Arizona'],
+    ['img' => 'custom-steel-ranch-entry-gate',       'wide' => false, 'tag' => 'Gates',           'caption' => 'Ranch entry gate with overhead header',                   'alt' => 'Custom steel ranch entry gate with overhead header and wood-infill panels fabricated by Salt River Steel in Florence, AZ'],
+    ['img' => 'covered-riding-arena-steel',          'wide' => true,  'tag' => 'Barns',           'caption' => 'Clear-span covered riding arena',                         'alt' => 'Covered steel riding arena with clear-span roof built by Salt River Steel'],
+    ['img' => 'three-rail-steel-fence-ranch',        'wide' => false, 'tag' => 'Fencing',         'caption' => 'Three-rail welded steel ranch fence',                     'alt' => 'Three-rail welded steel ranch fence installed by Salt River Steel in Central Arizona'],
+    ['img' => 'pool-ramada-pavers-arizona',          'wide' => false, 'tag' => 'Residential',     'caption' => 'Pool ramada over a paver patio',                          'alt' => 'Steel pool ramada over a paver patio built by Salt River Steel at an Arizona home'],
+    ['img' => 'white-steel-building-exterior',       'wide' => true,  'tag' => 'Steel Buildings', 'caption' => 'Finished steel building, Florence',                       'alt' => 'Completed white steel building exterior by Salt River Steel in Florence, AZ'],
+    ['img' => 'corrugated-privacy-panels-yard',      'wide' => false, 'tag' => 'Fencing',         'caption' => 'Corrugated steel privacy panels',                         'alt' => 'Corrugated steel privacy panels enclosing a yard, installed by Salt River Steel'],
+    ['img' => 'steel-frame-erection-red-iron',       'wide' => false, 'tag' => 'Fabrication',     'caption' => 'Red-iron frame going up',                                 'alt' => 'Red-iron steel building frame being erected by Salt River Steel in Florence, Arizona'],
+    ['img' => 'steel-shop-interior-roll-up-doors',   'wide' => true,  'tag' => 'Steel Buildings', 'caption' => 'Finished shop interior with roll-up doors',               'alt' => 'Interior of a finished steel shop with roll-up doors built by Salt River Steel'],
+    ['img' => 'metal-roof-panel-install',            'wide' => false, 'tag' => 'Roofing',         'caption' => 'Metal roof panels going on',                              'alt' => 'Crew installing metal roof panels on a Salt River Steel building'],
+    ['img' => 'pipe-corral-gate-ranch',              'wide' => false, 'tag' => 'Gates',           'caption' => 'Welded pipe corral gate',                                 'alt' => 'Welded pipe corral gate and fencing installed by Salt River Steel on a ranch property'],
+];
+
 /* ---------- Why-us proof cards (differentiators — NO fabricated reviews; reviews array is empty) ---------- */
 $whyCards = [
     ['map-pin',      'Local Florence Fabrication', 'Steel is cut and welded right here in Florence — rapid turnaround versus distant Phoenix and out-of-state suppliers.'],
@@ -100,7 +116,7 @@ $tickerItems = [
 /* ---- Card-tint tokens (required-components recipe) ---- */
 :root {
   /* Self-define accent-rgb so the page is token-compliant even if framework.css lacks it */
-  --color-accent-rgb: 6, 182, 212;
+  --color-accent-rgb: 200, 70, 26;
   --color-card-tint-1: rgba(var(--color-primary-rgb), 0.07);
   --color-card-tint-2: rgba(var(--color-secondary-rgb), 0.09);
   --color-card-tint-3: rgba(var(--color-accent-rgb), 0.10);   /* accent @ 10% */
@@ -133,10 +149,12 @@ $tickerItems = [
 /* ::before — brand gradient wash for legibility */
 .hero-modern::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
-  background: linear-gradient(105deg,
-    rgba(var(--color-primary-rgb), 0.93) 0%,
-    rgba(var(--color-primary-rgb), 0.78) 42%,
-    rgba(var(--color-secondary-rgb), 0.55) 100%);
+  background:
+    radial-gradient(60% 80% at 100% 100%, rgba(var(--color-accent-rgb), 0.28) 0%, transparent 70%),
+    linear-gradient(105deg,
+    rgba(var(--color-primary-rgb), 0.94) 0%,
+    rgba(var(--color-primary-rgb), 0.80) 42%,
+    rgba(var(--color-secondary-rgb), 0.50) 100%);
 }
 /* ::after — subtle noise/texture layer */
 .hero-modern::after {
@@ -253,8 +271,17 @@ $tickerItems = [
    3. SERVICES — tinted image cards (required-components pattern)
    ============================================================ */
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
-@media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  { .services-grid { grid-template-columns: 1fr; } }
+/* featured first service: 2x2 tile — kills the orphan-fifth-card row */
+.services-grid > .service-card-with-image { position: relative; }
+.services-grid > .service-card-with-image:first-child { grid-column: span 2; grid-row: span 2; }
+.services-grid > .service-card-with-image:first-child .service-card__image { aspect-ratio: auto; flex: 1 1 auto; min-height: 340px; }
+.services-grid > .service-card-with-image:first-child .service-card__body { padding-inline: var(--space-8); }
+.services-grid > .service-card-with-image:first-child h3 { font-size: var(--font-size-2xl); }
+.services-grid > .service-card-with-image:first-child .service-card__desc { font-size: var(--font-size-base); max-width: 52ch; }
+.services-grid > .service-card-with-image:first-child ul { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2) var(--space-4); }
+.services-grid > .service-card-with-image:first-child::after { content: "Most requested"; position: absolute; top: var(--space-4); left: var(--space-4); z-index: 2; font-family: var(--font-accent); font-weight: 700; font-size: var(--font-size-sm); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-white); background: var(--color-accent); padding: 0.35rem 0.7rem; border-radius: var(--radius-sm); box-shadow: var(--shadow-md); }
+@media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2, 1fr); } .services-grid > .service-card-with-image:first-child { grid-row: auto; } .services-grid > .service-card-with-image:first-child .service-card__image { aspect-ratio: 16 / 9; min-height: 0; } }
+@media (max-width: 560px)  { .services-grid { grid-template-columns: 1fr; } .services-grid > .service-card-with-image:first-child { grid-column: auto; } .services-grid > .service-card-with-image:first-child ul { grid-template-columns: 1fr; } }
 
 .service-card-with-image {
   border-radius: var(--radius-lg); overflow: hidden;
@@ -303,11 +330,15 @@ $tickerItems = [
 /* ============================================================
    4. STATS BAND (dark, animated counters)
    ============================================================ */
-.stats-band { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark-alt) 100%); }
+.stats-band { background: linear-gradient(120deg, var(--color-dark) 0%, var(--color-dark-alt) 48%, var(--color-primary) 100%); padding-top: calc(clamp(4rem, 10vh, 8rem) + 3vw); }
+.stats-band .container { position: relative; z-index: 1; }
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-8); text-align: center; }
 @media (max-width: 700px) { .stats-row { grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-6); } }
-.stat-item .stat-number { font-family: var(--font-heading); font-size: clamp(2.6rem, 5vw, var(--font-size-6xl)); font-weight: 800; color: var(--color-white); line-height: 1; }
-.stat-item .stat-number span { color: var(--color-accent); }
+.stat-item .stat-number { font-family: var(--font-accent); font-size: clamp(2.4rem, 4.6vw, 3.6rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-white); line-height: 1; }
+.stat-item .stat-number span { color: var(--color-accent-bright); }
+.stat-item { padding: var(--space-4) 0; border-left: 1px solid rgba(255,255,255,0.1); }
+.stat-item:first-child { border-left: 0; }
+@media (max-width: 700px) { .stat-item:nth-child(3) { border-left: 0; } }
 .stat-item .stat-label { display: block; margin-top: var(--space-3); font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.82); }
 
 /* ============================================================
@@ -632,6 +663,66 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
     font-size: 1.5rem;
   }
 }
+
+/* ============================================================
+   RECENT WORK GALLERY — scroll-snap strip (premium pass)
+   ============================================================ */
+.gallery-section { background: var(--color-light); padding-bottom: clamp(3rem, 8vh, 6rem); }
+.gallery-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-8); flex-wrap: wrap; margin-bottom: var(--space-8); }
+.gallery-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: var(--space-2) 0 0; max-width: 18ch; text-wrap: balance; }
+.gallery-lead { color: var(--color-gray-dark); max-width: 44ch; margin: 0; line-height: 1.6; }
+.gallery-track {
+  display: flex; gap: var(--space-5); overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: max(5%, calc((100vw - 1200px) / 2));
+  padding: var(--space-2) max(5%, calc((100vw - 1200px) / 2)) var(--space-6);
+  scrollbar-width: none; position: relative; z-index: 1;
+}
+.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-track:focus-visible { outline: 3px solid var(--color-accent); outline-offset: -3px; }
+.gallery-item {
+  flex: 0 0 clamp(260px, 30vw, 420px); scroll-snap-align: start; margin: 0; position: relative;
+  border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4 / 3; background: var(--color-dark);
+  box-shadow: var(--shadow-lg); transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.gallery-item--wide { flex-basis: clamp(360px, 44vw, 640px); }
+.gallery-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--transition-slow); }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item figcaption {
+  position: absolute; inset: auto 0 0 0; padding: var(--space-8) var(--space-5) var(--space-5);
+  background: linear-gradient(180deg, transparent 0%, rgba(var(--color-primary-rgb), 0.55) 45%, rgba(var(--color-primary-rgb), 0.9) 100%);
+  color: var(--color-white); display: flex; flex-direction: column; gap: var(--space-1);
+}
+.gallery-item__tag { font-family: var(--font-accent); font-weight: 700; font-size: var(--font-size-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-bright); }
+.gallery-item__cap { font-family: var(--font-heading); font-weight: 600; font-size: var(--font-size-base); line-height: 1.3; text-wrap: balance; }
+.gallery-foot { display: flex; justify-content: space-between; align-items: center; gap: var(--space-6); flex-wrap: wrap; margin-top: var(--space-4); position: relative; z-index: 1; }
+.gallery-hint { font-family: var(--font-accent); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: var(--font-size-sm); color: var(--color-gray); }
+@media (max-width: 700px) { .gallery-item, .gallery-item--wide { flex-basis: 82vw; } .gallery-hint { display: none; } }
+.floating-ring { position: absolute; border-radius: var(--radius-full); border: 2px solid var(--color-accent); opacity: 0.07; pointer-events: none; z-index: 0; animation: ring-drift 18s ease-in-out infinite alternate; }
+.floating-ring--a { width: 420px; height: 420px; top: -140px; right: -120px; }
+.floating-ring--b { width: 260px; height: 260px; bottom: -90px; left: 6%; animation-duration: 24s; border-width: 3px; }
+@keyframes ring-drift { from { transform: translate3d(0,0,0) rotate(0deg); } to { transform: translate3d(-24px, 18px, 0) rotate(12deg); } }
+@media (prefers-reduced-motion: reduce) { .floating-ring { animation: none; } }
+
+/* ABOUT / PROCESS — offset, asymmetric composition (premium pass) */
+.about-grid { grid-template-columns: 1.15fr 0.85fr; align-items: start; }
+.about-right { position: relative; margin-top: var(--space-16); }
+.about-right::before { content: ""; position: absolute; inset: var(--space-6) calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-6); border: 2px solid rgba(var(--color-accent-rgb), 0.35); border-radius: var(--radius-xl); z-index: 0; }
+.about-right::after { content: ""; position: absolute; top: -34px; left: -34px; width: 120px; height: 120px; border-radius: var(--radius-full); background: rgba(var(--color-accent-rgb), 0.10); z-index: 0; }
+.about-right img { position: relative; z-index: 1; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); clip-path: polygon(0 0, 100% 0, 100% 92%, 88% 100%, 0 100%); }
+.about-right .about-stat-card { z-index: 2; }
+.process-steps { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6) var(--space-8); }
+.process-step:nth-child(even) { transform: translateY(var(--space-6)); }
+@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .about-right { margin-top: var(--space-8); } .process-steps { grid-template-columns: 1fr; } .process-step:nth-child(even) { transform: none; } }
+
+/* FAQ — block layout (framework flex made the question a narrow column) */
+.faq-item { display: block; }
+.faq-question { font-size: var(--font-size-lg); line-height: 1.3; }
+
+/* Dark bands — brushed steel + grain (premium pass) */
+.cta-band { background: linear-gradient(120deg, var(--color-dark) 0%, var(--color-dark-alt) 55%, var(--color-primary) 100%); }
+.closing-cta { background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-dark-alt) 45%, var(--color-dark) 100%); }
+.whyus-section { background: linear-gradient(160deg, var(--color-dark) 0%, var(--color-dark-alt) 60%, var(--color-primary) 100%); }
 </style>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
@@ -793,34 +884,72 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
 <!-- ============================================================
      STATS BAND
      ============================================================ -->
-<section class="stats-band" aria-label="Salt River Steel by the numbers">
-    <span class="wave-divider" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,14 C1200,40 960,2 720,18 C480,34 240,0 0,20 Z"></path></svg></span>
+<section class="stats-band texture-steel slant-top" aria-label="Salt River Steel at a glance">
+    <span class="steel-grain" aria-hidden="true"></span>
+    <span class="wave-divider" aria-hidden="true" hidden><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,14 C1200,40 960,2 720,18 C480,34 240,0 0,20 Z"></path></svg></span>
     <div class="container">
         <div class="stats-row">
             <div class="stat-item reveal-up reveal-delay-1">
-                <div class="stat-number" data-counter="<?php echo $yearsInBusiness; ?>">0</div>
-                <span class="stat-label">Years Serving Central AZ</span>
+                <div class="stat-number">Est. <span><?php echo $yearEstablished; ?></span></div>
+                <span class="stat-label">Founded in Florence, AZ</span>
             </div>
             <div class="stat-item reveal-up reveal-delay-2">
-                <div class="stat-number" data-counter="5">0</div>
-                <span class="stat-label">Steel Service Lines</span>
+                <div class="stat-number">In-<span>House</span></div>
+                <span class="stat-label">Cut, welded &amp; finished in our shop</span>
             </div>
             <div class="stat-item reveal-up reveal-delay-3">
                 <div class="stat-number">3–5<span> Day</span></div>
-                <span class="stat-label">Custom Order Turnaround</span>
+                <span class="stat-label">Typical custom turnaround</span>
             </div>
             <div class="stat-item reveal-up reveal-delay-4">
-                <div class="stat-number" data-counter="100" data-suffix="%">0</div>
-                <span class="stat-label">Florence-Based Fabrication</span>
+                <div class="stat-number">Pinal <span>County</span></div>
+                <span class="stat-label">Delivered &amp; installed locally</span>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
+     RECENT WORK — horizontal scroll-snap gallery from the client photo pool
+     ============================================================ -->
+<section class="section gallery-section" aria-label="Recent Salt River Steel projects">
+    <span class="floating-ring floating-ring--a" aria-hidden="true"></span>
+    <span class="floating-ring floating-ring--b" aria-hidden="true"></span>
+    <div class="container">
+        <div class="gallery-head reveal-up">
+            <div>
+                <span class="eyebrow-label">Recent Work</span>
+                <h2>Built in Florence, <span class="text-accent">standing across Pinal County</span></h2>
+            </div>
+            <p class="gallery-lead">Barns, fencing, gates and buildings from the Salt River Steel crew — real jobs, photographed on site, not stock.</p>
+        </div>
+    </div>
+    <div class="gallery-track" data-p1-dynamic tabindex="0" aria-label="Project photos — scroll horizontally">
+        <?php foreach ($galleryItems as $gi => $g): ?>
+        <figure class="gallery-item<?php echo !empty($g['wide']) ? ' gallery-item--wide' : ''; ?>">
+            <img src="/assets/images/<?php echo $g['img']; ?>-960.webp"
+                 srcset="/assets/images/<?php echo $g['img']; ?>-480.webp 480w, /assets/images/<?php echo $g['img']; ?>-960.webp 960w, /assets/images/<?php echo $g['img']; ?>-1440.webp 1440w"
+                 sizes="(max-width: 700px) 82vw, <?php echo !empty($g['wide']) ? '640px' : '420px'; ?>"
+                 alt="<?php echo htmlspecialchars($g['alt']); ?>"
+                 width="960" height="720" loading="lazy" decoding="async">
+            <figcaption>
+                <span class="gallery-item__tag"><?php echo htmlspecialchars($g['tag']); ?></span>
+                <span class="gallery-item__cap"><?php echo htmlspecialchars($g['caption']); ?></span>
+            </figcaption>
+        </figure>
+        <?php endforeach; ?>
+    </div>
+    <div class="container gallery-foot reveal-up">
+        <a href="/services/" class="btn btn-primary btn-lg">Explore Our Services</a>
+        <span class="gallery-hint" aria-hidden="true">Drag or scroll to see more →</span>
+    </div>
+</section>
+
+<!-- ============================================================
      MID CTA BAND
      ============================================================ -->
-<section class="cta-band" aria-label="Request a steel quote">
+<section class="cta-band texture-steel" aria-label="Request a steel quote">
+    <span class="steel-grain" aria-hidden="true"></span>
     <span class="float-accent float-accent--a" aria-hidden="true"></span>
     <span class="float-accent float-accent--b" aria-hidden="true"></span>
     <div class="container">
@@ -877,7 +1006,8 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
 <!-- ============================================================
      WHY US (03) — proof without fabricated reviews
      ============================================================ -->
-<section class="section numbered-section whyus-section" data-num="03" aria-label="Why Central Arizona chooses Salt River Steel">
+<section class="section numbered-section whyus-section texture-steel" data-num="03" aria-label="Why Central Arizona chooses Salt River Steel">
+    <span class="steel-grain" aria-hidden="true"></span>
     <span class="wave-divider" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,14 C1200,40 960,2 720,18 C480,34 240,0 0,20 Z"></path></svg></span>
     <span class="num-watermark" aria-hidden="true">03</span>
     <div class="container">
@@ -994,7 +1124,8 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
 <!-- ============================================================
      CLOSING CTA
      ============================================================ -->
-<section class="closing-cta" aria-label="Contact Salt River Steel">
+<section class="closing-cta texture-steel" aria-label="Contact Salt River Steel">
+    <span class="steel-grain" aria-hidden="true"></span>
     <div class="container">
         <h2 class="reveal-up">Let's fabricate your next project — right here in Florence.</h2>
         <p class="reveal-up reveal-delay-1">From a single custom gate to a full commercial build, Salt River Steel gives you local fabrication, honest timelines, and steel that's built for Central Arizona. Get your free estimate today.</p>

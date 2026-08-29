@@ -15,7 +15,7 @@
                 <div class="footer-grid">
                     <!-- Column 1: About -->
                     <div class="footer-col">
-                        <img src="/assets/images/logo.png" alt="<?php echo htmlspecialchars($siteName); ?>" class="footer-logo" width="80" height="80">
+                        <img src="/assets/images/logo-mark.png" alt="<?php echo htmlspecialchars($siteName); ?>" class="footer-logo" width="80" height="80">
                         <p class="footer-tagline"><?php echo htmlspecialchars($tagline); ?></p>
                         <p class="footer-desc">
                             Professional steel fabrication and custom metalwork serving Florence, AZ and surrounding areas. 

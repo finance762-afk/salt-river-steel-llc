@@ -93,7 +93,7 @@ $otherMedia = [
 :root {
   --sp-line: rgba(var(--color-primary-rgb), 0.10);
   --sp-tint-1: rgba(var(--color-primary-rgb), 0.06);
-  --sp-tint-2: rgba(6, 182, 212, 0.09);
+  --sp-tint-2: rgba(var(--color-accent-rgb), 0.09);
 }
 
 /* ---------- HERO (layered) ---------- */
@@ -166,7 +166,7 @@ $otherMedia = [
 @media (max-width: 640px) { .ind-spec { grid-template-columns: 1fr; } }
 .ind-spec-row { background: var(--color-dark); padding: var(--space-7) var(--space-7); display: flex; gap: var(--space-5); align-items: flex-start; transition: background var(--transition-base); }
 .ind-spec-row:hover { background: #0f1a24; }
-.ind-spec-row__ic { flex-shrink: 0; width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(6,182,212,0.14); color: var(--color-accent); display: flex; align-items: center; justify-content: center; }
+.ind-spec-row__ic { flex-shrink: 0; width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(var(--color-accent-rgb),0.14); color: var(--color-accent); display: flex; align-items: center; justify-content: center; }
 .ind-spec-row__label { display: block; font-size: var(--font-size-xs, 0.75rem); text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-accent); margin-bottom: var(--space-2); font-weight: 700; }
 .ind-spec-row h3 { font-size: var(--font-size-lg); color: var(--color-white); margin-bottom: var(--space-2); }
 .ind-spec-row p { margin: 0; color: rgba(255,255,255,0.78); font-size: var(--font-size-sm); line-height: 1.6; }
@@ -191,7 +191,7 @@ $otherMedia = [
 @media (max-width: 720px) { .compare-grid { grid-template-columns: 1fr; } }
 .compare-col { border-radius: var(--radius-lg); padding: var(--space-8) var(--space-6); border: 1px solid var(--sp-line); }
 .compare-col--them { background: var(--color-light); }
-.compare-col--us { background: linear-gradient(160deg, rgba(var(--color-primary-rgb),0.06), rgba(6,182,212,0.10)); border-color: var(--color-accent); }
+.compare-col--us { background: linear-gradient(160deg, rgba(var(--color-primary-rgb),0.06), rgba(var(--color-accent-rgb),0.10)); border-color: var(--color-accent); }
 .compare-col h3 { font-size: var(--font-size-xl); margin-bottom: var(--space-5); color: var(--color-dark); display: flex; align-items: center; gap: var(--space-2); }
 .compare-col--us h3 { color: var(--color-primary); }
 .compare-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
@@ -225,7 +225,7 @@ $otherMedia = [
 
 /* ---------- FINAL CTA ---------- */
 .sp-cta { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); }
-.sp-cta::after { content: ""; position: absolute; right: -60px; top: -60px; width: 320px; height: 320px; border-radius: 50%; background: rgba(6,182,212,0.18); pointer-events: none; }
+.sp-cta::after { content: ""; position: absolute; right: -60px; top: -60px; width: 320px; height: 320px; border-radius: 50%; background: rgba(var(--color-accent-rgb),0.18); pointer-events: none; }
 .sp-cta .container { position: relative; z-index: 1; text-align: center; max-width: 700px; }
 .sp-cta h2 { color: var(--color-white); font-size: clamp(1.9rem, 3.6vw, 2.8rem); margin-bottom: var(--space-4); text-wrap: balance; }
 .sp-cta p { color: rgba(255,255,255,0.92); font-size: var(--font-size-lg); margin-bottom: var(--space-8); }
@@ -523,6 +523,30 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
 </section>
 
 <!-- FINAL CTA -->
+<!-- Recent work — client photos from the Salt River Steel pool -->
+<section class="section sp-gallery" aria-label="Recent industrial fabrication work by Salt River Steel">
+    <div class="container">
+        <div class="section-title reveal-up">
+            <span class="eyebrow-label">Recent Work</span>
+            <h2>Industrial fabrication we've <span class="text-accent">built recently</span></h2>
+        </div>
+        <div class="sp-gallery-grid" data-p1-dynamic>
+            <figure class="sp-gallery-item reveal-up reveal-delay-1">
+                <img src="/assets/images/steel-fabrication-shop-interior-960.webp" srcset="/assets/images/steel-fabrication-shop-interior-480.webp 480w, /assets/images/steel-fabrication-shop-interior-960.webp 960w, /assets/images/steel-fabrication-shop-interior-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 520px" alt="Interior of the Salt River Steel fabrication shop with steel framing" width="960" height="720" loading="lazy" decoding="async">
+                <figcaption>Inside the Florence fabrication shop</figcaption>
+            </figure>
+            <figure class="sp-gallery-item reveal-up reveal-delay-2">
+                <img src="/assets/images/fabricated-steel-on-trailer-960.webp" srcset="/assets/images/fabricated-steel-on-trailer-480.webp 480w, /assets/images/fabricated-steel-on-trailer-960.webp 960w, /assets/images/fabricated-steel-on-trailer-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 380px" alt="Fabricated steel loaded on a trailer for delivery from the Salt River Steel shop in Florence" width="960" height="720" loading="lazy" decoding="async">
+                <figcaption>Fabricated steel loaded for delivery</figcaption>
+            </figure>
+            <figure class="sp-gallery-item reveal-up reveal-delay-3">
+                <img src="/assets/images/fabrication-yard-trailers-florence-960.webp" srcset="/assets/images/fabrication-yard-trailers-florence-480.webp 480w, /assets/images/fabrication-yard-trailers-florence-960.webp 960w, /assets/images/fabrication-yard-trailers-florence-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 380px" alt="Salt River Steel fabrication yard in Florence with trailers and welding equipment" width="960" height="720" loading="lazy" decoding="async">
+                <figcaption>The Florence fab yard</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
 <section class="section sp-cta" aria-label="Request an industrial fabrication quote">
   <div class="container">
     <h2 class="reveal-up">Let's get your steel fabricated and back to work.</h2>

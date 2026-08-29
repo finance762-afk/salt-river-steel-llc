@@ -12,7 +12,7 @@ $pageTitle        = 'Cookie Policy | Salt River Steel LLC';
 $pageDescription  = 'How Salt River Steel LLC uses cookies and similar technologies on our website. Learn how to control and manage cookies.';
 $canonicalUrl     = $siteUrl . '/cookie-policy/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 
 $lastUpdated      = date('F j, Y');
 

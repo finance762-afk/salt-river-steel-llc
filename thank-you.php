@@ -12,7 +12,7 @@ $pageTitle        = 'Thank You | Salt River Steel';
 $pageDescription  = 'Thank you for contacting Salt River Steel. We\'ll respond to your steel fabrication inquiry within 1 business day.';
 $canonicalUrl     = $siteUrl . '/thank-you/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 $noindex          = true; // Don't index thank-you page
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>

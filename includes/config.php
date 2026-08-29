@@ -149,18 +149,18 @@ $googleAnalyticsId = 'G-XXXXXXXXXX';                 // placeholder — replace 
  * Refined during logo analysis if needed.
  */
 $colors = [
-    'primary'       => '#1a2b3c',
-    'primary_rgb'   => '26, 43, 60',
-    'secondary'     => '#4d5e6f',
-    'secondary_rgb' => '77, 94, 111',
-    'accent'        => '#06b6d4',
+    'primary'       => '#1f2428',
+    'primary_rgb'   => '31, 36, 40',
+    'secondary'     => '#5a6570',
+    'secondary_rgb' => '90, 101, 112',
+    'accent'        => '#c8461a',
 ];
 
 /* ---------- Forms ---------- */
 $formAction = 'https://formsubmit.co/saltriversteel1@gmail.com';
 
 /* ---------- Assets ---------- */
-$logo = '/assets/images/logo.png';                   // localized in a later phase
+$logo = '/assets/images/logo-mark.png';                   // localized in a later phase
 
 /* ---------- Tier ---------- */
 $tier = 'premium';
@@ -169,4 +169,4 @@ $tier = 'premium';
  * SINGLE source of the framework.css cache-bust. Pages must NEVER set
  * their own $cssVersion. Bump this on every framework.css change.
  */
-$cssVersion = '202608282338';
+$cssVersion = '20260829002053';

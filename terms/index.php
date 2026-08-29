@@ -12,7 +12,7 @@ $pageTitle        = 'Terms of Service | Salt River Steel LLC';
 $pageDescription  = 'Terms of Service for Salt River Steel LLC. Understand our service agreements, estimates, project work, warranties, and liability terms.';
 $canonicalUrl     = $siteUrl . '/terms/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 
 $companyEntityType = 'Limited Liability Company';
 $companyState      = 'Arizona';

@@ -12,7 +12,7 @@ $pageTitle        = 'Privacy Policy | Salt River Steel LLC';
 $pageDescription  = 'How Salt River Steel LLC collects, uses, and protects your information. Privacy practices for our website and contact forms.';
 $canonicalUrl     = $siteUrl . '/privacy-policy/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 
 $companyEntityType = 'Limited Liability Company';
 $companyState      = 'Arizona';

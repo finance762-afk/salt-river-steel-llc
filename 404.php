@@ -14,7 +14,7 @@ $pageTitle        = 'Page Not Found | Salt River Steel';
 $pageDescription  = 'The page you\'re looking for doesn\'t exist. Explore our steel fabrication services or contact us for a free estimate in Florence, AZ.';
 $canonicalUrl     = $siteUrl . '/404/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 $noindex          = true; // Don't index 404 page
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>

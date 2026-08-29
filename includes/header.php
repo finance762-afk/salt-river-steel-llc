@@ -17,7 +17,7 @@
                 <!-- Logo -->
                 <a href="/" class="site-logo" aria-label="<?php echo htmlspecialchars($siteName); ?> Home">
                     <img 
-                        src="/assets/images/logo.png" 
+                        src="/assets/images/logo-mark.png" 
                         alt="<?php echo htmlspecialchars($siteName); ?> Logo" 
                         width="96" 
                         height="96"

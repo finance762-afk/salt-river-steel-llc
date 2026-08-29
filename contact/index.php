@@ -12,7 +12,7 @@ $pageTitle        = 'Contact Us | Salt River Steel | Florence, AZ';
 $pageDescription  = 'Contact Salt River Steel LLC in Florence, AZ for a free steel fabrication estimate. Call ' . $phone . ' or fill out our contact form for custom gates, fencing & structural steel.';
 $canonicalUrl     = $siteUrl . '/contact/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 
 /* ---------- BreadcrumbList schema ---------- */
 $schemaGraph = [

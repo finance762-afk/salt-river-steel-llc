@@ -12,7 +12,7 @@ $pageTitle        = 'Frequently Asked Questions | Salt River Steel | Florence, A
 $pageDescription  = 'Common questions about Salt River Steel\'s custom steel fabrication, turnaround times, delivery, pricing, and services in Florence, AZ. Get straight answers from a local steel shop.';
 $canonicalUrl     = $siteUrl . '/faq/';
 $pageCanonical    = $canonicalUrl;
-$ogImage          = $siteUrl . '/assets/images/logo.png';
+$ogImage          = $siteUrl . '/assets/images/logo-mark.png';
 
 /* ---------- FAQ data (comprehensive 15-20 questions across all services) ---------- */
 $faqCategories = [

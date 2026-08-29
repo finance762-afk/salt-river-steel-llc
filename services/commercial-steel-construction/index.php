@@ -93,7 +93,7 @@ $otherMedia = [
 :root {
   --sp-line: rgba(var(--color-primary-rgb), 0.10);
   --sp-tint-1: rgba(var(--color-primary-rgb), 0.06);
-  --sp-tint-2: rgba(6, 182, 212, 0.09);
+  --sp-tint-2: rgba(var(--color-accent-rgb), 0.09);
 }
 
 /* ---------- HERO (layered) ---------- */
@@ -199,7 +199,7 @@ $otherMedia = [
 @media (max-width: 720px) { .compare-grid { grid-template-columns: 1fr; } }
 .compare-col { border-radius: var(--radius-lg); padding: var(--space-8) var(--space-6); border: 1px solid var(--sp-line); }
 .compare-col--them { background: var(--color-light); }
-.compare-col--us { background: linear-gradient(160deg, rgba(var(--color-primary-rgb),0.06), rgba(6,182,212,0.10)); border-color: var(--color-accent); }
+.compare-col--us { background: linear-gradient(160deg, rgba(var(--color-primary-rgb),0.06), rgba(var(--color-accent-rgb),0.10)); border-color: var(--color-accent); }
 .compare-col h3 { font-size: var(--font-size-xl); margin-bottom: var(--space-5); color: var(--color-dark); display: flex; align-items: center; gap: var(--space-2); }
 .compare-col--us h3 { color: var(--color-primary); }
 .compare-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
@@ -233,7 +233,7 @@ $otherMedia = [
 
 /* ---------- FINAL CTA ---------- */
 .sp-cta { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); }
-.sp-cta::after { content: ""; position: absolute; right: -60px; top: -60px; width: 320px; height: 320px; border-radius: 50%; background: rgba(6,182,212,0.18); pointer-events: none; }
+.sp-cta::after { content: ""; position: absolute; right: -60px; top: -60px; width: 320px; height: 320px; border-radius: 50%; background: rgba(var(--color-accent-rgb),0.18); pointer-events: none; }
 .sp-cta .container { position: relative; z-index: 1; text-align: center; max-width: 700px; }
 .sp-cta h2 { color: var(--color-white); font-size: clamp(1.9rem, 3.6vw, 2.8rem); margin-bottom: var(--space-4); text-wrap: balance; }
 .sp-cta p { color: rgba(255,255,255,0.92); font-size: var(--font-size-lg); margin-bottom: var(--space-8); }
@@ -527,6 +527,30 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
 </section>
 
 <!-- FINAL CTA -->
+<!-- Recent work — client photos from the Salt River Steel pool -->
+<section class="section sp-gallery" aria-label="Recent commercial steel work by Salt River Steel">
+    <div class="container">
+        <div class="section-title reveal-up">
+            <span class="eyebrow-label">Recent Work</span>
+            <h2>Commercial steel we've <span class="text-accent">built recently</span></h2>
+        </div>
+        <div class="sp-gallery-grid" data-p1-dynamic>
+            <figure class="sp-gallery-item reveal-up reveal-delay-1">
+                <img src="/assets/images/steel-shop-interior-roll-up-doors-960.webp" srcset="/assets/images/steel-shop-interior-roll-up-doors-480.webp 480w, /assets/images/steel-shop-interior-roll-up-doors-960.webp 960w, /assets/images/steel-shop-interior-roll-up-doors-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 520px" alt="Interior of a finished steel shop with roll-up doors built by Salt River Steel" width="960" height="720" loading="lazy" decoding="async">
+                <figcaption>Finished shop interior with roll-up doors</figcaption>
+            </figure>
+            <figure class="sp-gallery-item reveal-up reveal-delay-2">
+                <img src="/assets/images/clear-span-steel-building-interior-960.webp" srcset="/assets/images/clear-span-steel-building-interior-480.webp 480w, /assets/images/clear-span-steel-building-interior-960.webp 960w, /assets/images/clear-span-steel-building-interior-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 380px" alt="Clear-span red-iron steel building interior built by Salt River Steel" width="960" height="720" loading="lazy" decoding="async">
+                <figcaption>Clear-span red-iron building</figcaption>
+            </figure>
+            <figure class="sp-gallery-item reveal-up reveal-delay-3">
+                <img src="/assets/images/steel-crash-barrier-sports-facility-960.webp" srcset="/assets/images/steel-crash-barrier-sports-facility-480.webp 480w, /assets/images/steel-crash-barrier-sports-facility-960.webp 960w, /assets/images/steel-crash-barrier-sports-facility-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 380px" alt="Yellow steel crash barrier fabricated and installed by Salt River Steel at a sports facility" width="960" height="720" loading="lazy" decoding="async">
+                <figcaption>Steel crash barrier, sports facility</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
 <section class="section sp-cta" aria-label="Request a commercial steel estimate">
   <div class="container">
     <h2 class="reveal-up">Let's put your steel package on a local schedule.</h2>

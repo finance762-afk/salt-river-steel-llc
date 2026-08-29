@@ -136,7 +136,7 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
 }
 .svc-hero::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: radial-gradient(circle at 82% 22%, rgba(6,182,212,0.42) 0%, transparent 56%);
+  background: radial-gradient(circle at 82% 22%, rgba(var(--color-accent-rgb),0.42) 0%, transparent 56%);
   mix-blend-mode: screen;
 }
 .svc-hero::after {
@@ -149,7 +149,7 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
   font-family: var(--font-heading); font-size: var(--font-size-sm); font-weight: 600;
   text-transform: uppercase; letter-spacing: 2px; color: var(--color-white);
   padding: var(--space-2) var(--space-4);
-  background: rgba(6,182,212,0.18); border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(var(--color-accent-rgb),0.18); border: 1px solid rgba(255,255,255,0.28);
   border-radius: var(--radius-full); margin-bottom: var(--space-5);
 }
 .svc-hero__eyebrow svg { width: 18px; height: 18px; color: var(--color-accent); }
@@ -191,7 +191,7 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
 :root {
   --color-card-tint-1: rgba(var(--color-primary-rgb), 0.07);
   --color-card-tint-2: rgba(var(--color-secondary-rgb), 0.08);
-  --color-card-tint-3: rgba(6, 182, 212, 0.10);
+  --color-card-tint-3: rgba(var(--color-accent-rgb), 0.10);
 }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
 @media (max-width: 1000px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -253,11 +253,11 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
 .why-copy .answer-block { background: rgba(255,255,255,0.06); border-left: 4px solid var(--color-accent); color: rgba(255,255,255,0.9); padding: var(--space-5) var(--space-6); border-radius: var(--radius-sm); margin: 0; font-size: var(--font-size-base); line-height: 1.7; }
 .why-list { display: grid; gap: var(--space-4); }
 .why-item { display: grid; grid-template-columns: auto 1fr; gap: var(--space-4); align-items: start; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: var(--space-5); }
-.why-item__icon { width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(6,182,212,0.16); color: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.why-item__icon { width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(var(--color-accent-rgb),0.16); color: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .why-item__icon svg { width: 22px; height: 22px; }
 .why-item h3 { color: var(--color-white); font-size: var(--font-size-lg); margin-bottom: var(--space-1); }
 .why-item p { color: rgba(255,255,255,0.78); font-size: var(--font-size-sm); line-height: 1.6; margin: 0; }
-.why-float { position: absolute; border-radius: var(--radius-full); background: rgba(6,182,212,0.08); pointer-events: none; z-index: 0; }
+.why-float { position: absolute; border-radius: var(--radius-full); background: rgba(var(--color-accent-rgb),0.08); pointer-events: none; z-index: 0; }
 
 /* ============================================================
    5. PROCESS STRIP — numbered horizontal timeline
@@ -296,7 +296,7 @@ html.js-anim [data-animate].reveal-scale { transform: scale(0.92); }
 .closing-cta .btn-ghost { background: transparent; color: var(--color-white); border: 2px solid rgba(255,255,255,0.6); border-radius: var(--radius-md); padding: var(--space-3) var(--space-6); font-weight: 700; display: inline-flex; align-items: center; gap: var(--space-2); transition: background var(--transition-base); }
 .closing-cta .btn-ghost:hover { background: rgba(255,255,255,0.12); }
 .closing-cta .btn-ghost svg { width: 18px; height: 18px; }
-.closing-cta .floating-accent { position: absolute; border-radius: var(--radius-full); background: rgba(6,182,212,0.10); pointer-events: none; z-index: 0; }
+.closing-cta .floating-accent { position: absolute; border-radius: var(--radius-full); background: rgba(var(--color-accent-rgb),0.10); pointer-events: none; z-index: 0; }
 
 /* Section divider */
 .section-divider { display: block; width: 100%; height: auto; line-height: 0; }

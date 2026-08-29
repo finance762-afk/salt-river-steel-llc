@@ -83,7 +83,7 @@
             "longitude": <?php echo $geo['lng']; ?>
         },
         "hasMap": "<?php echo $gbpUrl; ?>",
-        "image": "<?php echo $siteUrl; ?>/assets/images/logo.png",
+        "image": "<?php echo $siteUrl; ?>/assets/images/logo-mark.png",
         "priceRange": "$$",
         "areaServed": [
             {
