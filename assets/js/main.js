@@ -17,25 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* === Mobile Hamburger Nav Toggle === */
+  /* === Mobile Hamburger Nav Toggle ===
+     header.php ships a .mobile-menu overlay (not the scaffold .nav-links pattern) —
+     the toggle targets whichever exists. Fixed 2026-08-29: the menu never opened. */
   const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-      const isOpen = navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', isOpen.toString());
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    // Close nav when clicking a link
-    navLinks.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
+  const mobileMenu = document.querySelector('.mobile-menu') || document.querySelector('.nav-links');
+  if (hamburger && mobileMenu) {
+    const setOpen = function(open) {
+      mobileMenu.classList.toggle('active', open);
+      hamburger.classList.toggle('active', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('menu-open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    hamburger.addEventListener('click', function() { setOpen(!mobileMenu.classList.contains('active')); });
+    mobileMenu.querySelectorAll('a').forEach(function(link) { link.addEventListener('click', function() { setOpen(false); }); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && mobileMenu.classList.contains('active')) setOpen(false); });
   }
 
   /* === Smooth Scroll for Anchor Links === */
@@ -112,21 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* === Reviews carousel === */
-  // v6.2: carousels are CSS scroll-snap by default (no Swiper CDN). If a build
-  // genuinely needs Swiper features, load the CDN in that page's head and this
-  // guard will initialize it; otherwise it's a harmless no-op.
-  if (typeof Swiper !== 'undefined') {
-    var reviewsSwiper = document.querySelector('.reviews-swiper');
-    if (reviewsSwiper) {
-      new Swiper('.reviews-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        loop: true,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-      });
-    }
-  }
+  /* Reviews carousel is CSS scroll-snap (v6.2); no JS carousel library. */
 
 });

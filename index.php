@@ -135,6 +135,7 @@ $tickerItems = [
 .hero-modern {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding: 170px 0 var(--space-16);
@@ -235,7 +236,7 @@ $tickerItems = [
   margin: var(--space-4) 0 var(--space-3); cursor: pointer;
 }
 .p1-consent-line input[type="checkbox"] {
-  width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0;
+  width: 22px; height: 22px; margin-top: 2px; flex-shrink: 0;
   accent-color: var(--color-primary); cursor: pointer;
 }
 .p1-consent-line span { flex: 1; }
@@ -468,12 +469,12 @@ html.js-anim .reveal-up.revealed, html.js-anim .reveal-left.revealed, html.js-an
   outline: 3px solid var(--color-accent); outline-offset: 2px;
 }
 @media (max-width: 900px) {
-  .hero-modern { padding-top: 132px; }
+  .hero-modern { padding-top: calc(var(--nav-height) + var(--space-6)); }
   .hero-modern .container { grid-template-columns: 1fr; gap: var(--space-8); }
   .hero-text { max-width: none; }
 }
 @media (max-width: 480px) {
-  .hero-modern { padding-top: 112px; }
+  .hero-modern { padding-top: calc(var(--nav-height) + var(--space-6)); }
   .hero-trust { grid-template-columns: 1fr; }
   .hero-actions .btn { width: 100%; }
 }

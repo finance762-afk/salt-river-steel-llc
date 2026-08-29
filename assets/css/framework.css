@@ -268,7 +268,7 @@ p {
 
 /* === Hero Section === */
 .hero {
-  position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center;
   background-size: cover; background-position: center; background-repeat: no-repeat;
   overflow: hidden; padding-top: 150px; /* clears the 96px-logo white nav */
 }
@@ -307,7 +307,7 @@ p {
 .hero__subtitle { color: rgba(255,255,255,0.85); font-size: var(--font-size-lg); line-height: 1.7; max-width: 60ch; margin: var(--space-4) auto 0; }
 .eyebrow-label { display: inline-block; font-family: var(--font-heading); font-size: var(--font-size-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--color-accent); }
 .section--light { background: var(--color-light); }
-@media (max-width: 768px) { .hero--interior, .hero--legal { padding-top: 112px; } }
+@media (max-width: 768px) { .hero--interior, .hero--legal { padding-top: calc(var(--nav-height) + var(--space-6)); } }
 
 /* === Breadcrumb === */
 .breadcrumb { background: var(--color-light); border-bottom: 1px solid var(--color-gray-light); }
@@ -317,7 +317,7 @@ p {
 
 /* === Floating-label form fields (contact + hero forms) === */
 .form-field { position: relative; margin-bottom: var(--space-5); }
-.form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 52px; padding: var(--space-4); border: 1.5px solid var(--color-gray-light); border-radius: var(--radius-md); font: inherit; font-size: var(--font-size-sm); background: var(--color-white); transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
+.form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 52px; padding: var(--space-4); border: 1.5px solid var(--color-gray-light); border-radius: var(--radius-md); font: inherit; font-size: 1rem; background: var(--color-white); transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
 .form-field textarea { min-height: 130px; }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12); }
 .form-field > label { position: absolute; left: var(--space-4); top: 26px; transform: translateY(-50%); color: var(--color-gray); pointer-events: none; font-size: var(--font-size-sm); transition: all var(--transition-fast); white-space: nowrap; }
@@ -601,8 +601,17 @@ section.hero {
   .nav-links a { font-size: var(--font-size-xl); color: var(--color-white); }
   .hamburger { display: flex; z-index: 1001; }
   .hamburger.active span { background: var(--color-white); }
-  .site-logo, .site-header.scrolled .site-logo { height: 72px; }
+  /* LARGE MOBILE LOGO (owner request 2026-08-29): 96px at top, 80px once scrolled */
+  :root { --nav-height: 116px; --font-size-xs: 0.8125rem; }
+  .site-header { padding: var(--space-2) 0; }
+  .site-logo { height: 96px; }
+  .site-header.scrolled .site-logo { height: 80px; }
+  .hamburger { min-width: 48px; min-height: 48px; align-items: center; justify-content: center; gap: 6px; padding: 0; margin-right: calc(-1 * var(--space-2)); }
+  .hamburger span { width: 28px; height: 3px; border-radius: 2px; }
   .header-cta { display: none; }
+  .footer-col ul li { margin-bottom: 0; }
+  .footer-col ul a, .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .footer-legal-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-2); }
 
   .services-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
@@ -1317,3 +1326,44 @@ p {
 .sp-gallery-item figcaption { position: absolute; inset: auto 0 0 0; padding: var(--space-8) var(--space-5) var(--space-4); color: var(--color-white); font-family: var(--font-heading); font-weight: 600; font-size: var(--font-size-sm); background: linear-gradient(180deg, transparent 0%, rgba(var(--color-primary-rgb), 0.85) 100%); }
 @media (max-width: 900px) { .sp-gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; } .sp-gallery-item:first-child { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 9; } }
 @media (max-width: 560px) { .sp-gallery-grid { grid-template-columns: 1fr; } .sp-gallery-item:first-child { grid-column: auto; aspect-ratio: 4 / 3; } }
+
+/* === Mobile pass 2026-08-29: overlay menu (matches header.php markup), touch targets, iOS zoom === */
+.mobile-menu { padding: calc(var(--nav-height) + var(--space-4)) var(--space-6) var(--space-10); align-items: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.mobile-menu-inner { width: 100%; max-width: 440px; margin: 0 auto; }
+.mobile-menu-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+.mobile-menu-links > li > a, .mobile-menu-links > li > .mobile-menu-label { display: flex; align-items: center; justify-content: center; min-height: 52px; padding: var(--space-2) 0; text-align: center; color: var(--color-white); font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight: 700; }
+.mobile-menu-links > li > a[aria-current="page"] { color: var(--color-accent-bright, var(--color-accent)); }
+.mobile-menu-label { font-family: var(--font-accent); font-size: var(--font-size-base); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-bright, var(--color-accent)); min-height: 44px; }
+.mobile-submenu { list-style: none; margin: 0 0 var(--space-2); padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-1) var(--space-3); }
+.mobile-submenu a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; padding: var(--space-1) var(--space-2); font-size: var(--font-size-base); font-weight: 600; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); }
+.mobile-menu-cta .btn-primary, .mobile-menu-cta .btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 52px; }
+.mobile-menu.active .mobile-menu-links > li, .mobile-menu.active .mobile-menu-cta { animation: mm-in 0.38s cubic-bezier(.2,.7,.2,1) both; }
+.mobile-menu.active .mobile-menu-links > li:nth-child(2) { animation-delay: .05s; }
+.mobile-menu.active .mobile-menu-links > li:nth-child(3) { animation-delay: .10s; }
+.mobile-menu.active .mobile-menu-links > li:nth-child(4) { animation-delay: .15s; }
+.mobile-menu.active .mobile-menu-links > li:nth-child(5) { animation-delay: .20s; }
+.mobile-menu.active .mobile-menu-links > li:nth-child(6) { animation-delay: .25s; }
+.mobile-menu.active .mobile-menu-cta { animation-delay: .32s; }
+@keyframes mm-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .mobile-menu.active .mobile-menu-links > li, .mobile-menu.active .mobile-menu-cta { animation: none; } }
+body.menu-open .site-header { background: rgba(16, 18, 20, 0.98); }
+/* 44px minimum touch targets on every button-like control */
+.btn, .btn-primary, .btn-secondary, .btn-accent, .btn-outline-white, .btn-large, .btn-lg, .btn-block, .service-card__cta, .bi-card__cta, .bi-chip, .review-badge { min-height: 44px; }
+a.btn-primary, a.btn-secondary, a.btn-accent, a.btn-outline-white { display: inline-flex; align-items: center; justify-content: center; }
+.service-card__cta { display: flex; align-items: center; justify-content: center; }
+/* 16px form controls — anything smaller makes iOS Safari zoom the page on focus */
+.form-field input, .form-field select, .form-field textarea, input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), select, textarea { font-size: 1rem; }
+input[type="checkbox"], input[type="radio"] { width: 22px; height: 22px; min-width: 22px; accent-color: var(--color-accent); }
+.form-field--checkbox label, .tcpa-consent label { padding: var(--space-1) 0; }
+
+/* === Mobile pass 2026-08-29 (end-of-cascade overrides for the later phase-2 media block) === */
+@media (max-width: 768px) {
+  .site-logo, .site-header.scrolled .site-logo { height: 96px; }
+  .site-header.scrolled .site-logo { height: 80px; }
+  .breadcrumb a, .footer-legal-row a { display: inline-flex; align-items: center; min-height: 44px; }
+  .footer-legal-row { row-gap: 0; }
+  .hero-trust-item a, .review-badge, .sp-hero-trust a { min-height: 44px; display: inline-flex; align-items: center; }
+}
+.mobile-menu { z-index: 999; }
+.mobile-menu.active, .mobile-menu[aria-hidden="false"] { display: flex; opacity: 1; }
+.mobile-menu-inner { height: auto; min-height: 100%; justify-content: center; padding: 0; }

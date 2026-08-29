@@ -199,9 +199,9 @@
     </div>
     
     <!-- Scripts (v6.2 — NO CDN scripts, local JS only) -->
-    <script src="/assets/js/main.js" defer></script>
-    <script src="/assets/js/animations.js" defer></script>
-    <script src="/assets/js/effects.js" defer></script>
+    <script src="/assets/js/main.js?v=<?php echo $cssVersion; ?>" defer></script>
+    <script src="/assets/js/animations.js?v=<?php echo $cssVersion; ?>" defer></script>
+    <script src="/assets/js/effects.js?v=<?php echo $cssVersion; ?>" defer></script>
     
     <!-- Back to top inline script -->
     <script>

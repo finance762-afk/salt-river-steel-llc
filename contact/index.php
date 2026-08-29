@@ -115,7 +115,7 @@ $schemaMarkup = '<script type="application/ld+json">' . json_encode($schemaGraph
 .form-field input:not(:placeholder-shown) + label,
 .form-field select:not(:placeholder-shown) + label,
 .form-field textarea:not(:placeholder-shown) + label {
-  top: 0; font-size: 0.75rem; color: var(--color-primary);
+  top: 0; font-size: var(--font-size-xs); color: var(--color-primary);
 }
 
 /* TCPA v2.1 consent fieldset (Premium/full-page form pattern) */
@@ -133,7 +133,7 @@ $schemaMarkup = '<script type="application/ld+json">' . json_encode($schemaGraph
 }
 .p1-consent-item:last-child { margin-bottom: 0; }
 .p1-consent-item input[type="checkbox"] {
-  width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--color-primary); cursor: pointer;
+  width: 22px; height: 22px; margin-top: 2px; flex-shrink: 0; accent-color: var(--color-primary); cursor: pointer;
 }
 .p1-consent-item span { color: var(--color-gray-dark); }
 .p1-consent-item span strong { color: var(--color-dark); }
