@@ -286,12 +286,12 @@ $schemaMarkup = '<script type="application/ld+json">' . json_encode($schemaGraph
 
                         <label class="p1-consent-item">
                             <input type="checkbox" name="terms_accepted" value="yes" required>
-                            <span>I have read and agree to the <a href="/terms/">Terms of Service</a> and <a href="/privacy-policy/">Privacy Policy</a>. *</span>
+                            <span>I have read and agree to the <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a> and <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. *</span>
                         </label>
                     </fieldset>
 
                     <button type="submit" class="btn btn-primary btn-submit">Send My Request</button>
-                    <p class="form-footnote">By submitting, you agree to our <a href="/terms/">Terms</a> and <a href="/privacy-policy/">Privacy Policy</a>.</p>
+                    <p class="form-footnote">By submitting, you agree to our <a href="/terms/" target="_blank" rel="noopener">Terms</a> and <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
                 </form>
             </div>
 
