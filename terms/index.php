@@ -146,9 +146,6 @@ $schemaMarkup = '<script type="application/ld+json">' . json_encode($schemaGraph
     Address: <?php echo htmlspecialchars($address['street']); ?>, <?php echo htmlspecialchars($address['city']); ?>, <?php echo $address['state']; ?> <?php echo $address['zip']; ?>
 </p>
 
-<div class="legal-disclaimer">
-    This document is provided as a general template. We recommend reviewing with a licensed <?php echo htmlspecialchars($companyState); ?> attorney before publication.
-</div>
 
 </article>
 

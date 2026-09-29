@@ -149,9 +149,6 @@ $schemaMarkup = '<script type="application/ld+json">' . json_encode($schemaGraph
     Address: <?php echo htmlspecialchars($address['street']); ?>, <?php echo htmlspecialchars($address['city']); ?>, <?php echo $address['state']; ?> <?php echo $address['zip']; ?>
 </p>
 
-<div class="legal-disclaimer">
-    This Privacy Policy is provided as a general template. We recommend reviewing this document with a licensed <?php echo htmlspecialchars($companyState); ?> attorney before publication to ensure compliance with current state and federal privacy laws.
-</div>
 
 </article>
 
